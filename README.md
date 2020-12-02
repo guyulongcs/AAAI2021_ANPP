@@ -1,2 +1,2 @@
-Attentive Neural Point Processes for Event Forecastin (AAAI 2021)
+Attentive Neural Point Processes for Event Forecasting (AAAI 2021)
 ============
