@@ -1,0 +1,916 @@
+Loading data..
+2018-12-03 00:16:05.572608: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-12-03 00:16:05.982045: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 22.38GiB freeMemory: 22.21GiB
+2018-12-03 00:16:05.982102: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2018-12-03 00:16:06.283828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21553 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:02:00.0, compute capability: 6.1)
+{
+    "num_blocks": 1, 
+    "help": false, 
+    "train_batch_size": 32, 
+    "max_epochs": 10, 
+    "display_freq": 100, 
+    "regulation_rate": 5e-05, 
+    "eval_freq": 1000, 
+    "test_batch_size": 128, 
+    "num_heads": 8, 
+    "model_dir": "save_path", 
+    "dropout": 0.0, 
+    "concat_time_emb": true, 
+    "helpfull": false, 
+    "from_scratch": true, 
+    "optimizer": "sgd", 
+    "cuda_visible_devices": "0", 
+    "helpshort": false, 
+    "learning_rate": 1.0, 
+    "hidden_units": 128, 
+    "max_gradient_norm": 5.0, 
+    "per_process_gpu_memory_fraction": 0.0, 
+    "h": false, 
+    "itemid_embedding_size": 64, 
+    "cateid_embedding_size": 64, 
+    "user_count": 192403, 
+    "item_count": 63001, 
+    "cate_count": 801
+}
+WARNING:tensorflow:From /export/sdb/home/guyulong/.local/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:497: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+All global variables:
+('\t', <tf.Variable 'item_emb_w:0' shape=(63001, 64) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'item_b:0' shape=(63001,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'cate_emb_w:0' shape=(801, 64) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'dense/kernel:0' shape=(140, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'dense/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/dense/kernel:0' shape=(128, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/dense/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/dense_1/kernel:0' shape=(128, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/dense_1/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/dense_2/kernel:0' shape=(128, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/dense_2/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/ln/Variable:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/self_attention/ln/Variable_1:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/feed_forward/conv1d/kernel:0' shape=(1, 128, 32) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/feed_forward/conv1d/bias:0' shape=(32,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/feed_forward/conv1d_1/kernel:0' shape=(1, 32, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/feed_forward/conv1d_1/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/feed_forward/ln/Variable:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/user_hist_group/num_blocks_0/feed_forward/ln/Variable_1:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/dense/kernel:0' shape=(128, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/dense/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/dense_1/kernel:0' shape=(128, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/dense_1/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/dense_2/kernel:0' shape=(128, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/dense_2/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/ln/Variable:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/vanilla_attention/ln/Variable_1:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/feed_forward/conv1d/kernel:0' shape=(1, 128, 32) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/feed_forward/conv1d/bias:0' shape=(32,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/feed_forward/conv1d_1/kernel:0' shape=(1, 32, 128) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/feed_forward/conv1d_1/bias:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/feed_forward/ln/Variable:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'all/item_feature_group/num_blocks_0/feed_forward/ln/Variable_1:0' shape=(128,) dtype=float32_ref>, 'trainable')
+('\t', <tf.Variable 'global_step:0' shape=() dtype=int32_ref>)
+('\t', <tf.Variable 'global_epoch_step:0' shape=() dtype=int32_ref>)
+Created new model parameters..
+Init finish.	Cost time: 250.45s
+Init AUC: 0.4771
+Training..	max_epochs: 10	epoch_size: 81523
+Epoch 0 Global_step 1000	Train_loss: 0.6749	Eval_AUC: 0.6649
+Epoch 0 Global_step 2000	Train_loss: 0.6445	Eval_AUC: 0.6987
+Epoch 0 Global_step 3000	Train_loss: 0.6226	Eval_AUC: 0.7156
+Epoch 0 Global_step 4000	Train_loss: 0.6091	Eval_AUC: 0.7241
+Epoch 0 Global_step 5000	Train_loss: 0.6004	Eval_AUC: 0.7390
+Epoch 0 Global_step 6000	Train_loss: 0.5919	Eval_AUC: 0.7462
+Epoch 0 Global_step 7000	Train_loss: 0.5855	Eval_AUC: 0.7523
+Epoch 0 Global_step 8000	Train_loss: 0.5784	Eval_AUC: 0.7634
+Epoch 0 Global_step 9000	Train_loss: 0.5743	Eval_AUC: 0.7683
+Epoch 0 Global_step 10000	Train_loss: 0.5629	Eval_AUC: 0.7833
+Epoch 0 Global_step 11000	Train_loss: 0.5533	Eval_AUC: 0.7925
+Epoch 0 Global_step 12000	Train_loss: 0.5517	Eval_AUC: 0.7934
+Epoch 0 Global_step 13000	Train_loss: 0.5464	Eval_AUC: 0.8003
+Epoch 0 Global_step 14000	Train_loss: 0.5434	Eval_AUC: 0.8031
+Epoch 0 Global_step 15000	Train_loss: 0.5371	Eval_AUC: 0.8037
+Epoch 0 Global_step 16000	Train_loss: 0.5369	Eval_AUC: 0.8059
+Epoch 0 Global_step 17000	Train_loss: 0.5327	Eval_AUC: 0.8105
+Epoch 0 Global_step 18000	Train_loss: 0.5339	Eval_AUC: 0.8065
+Epoch 0 Global_step 19000	Train_loss: 0.5300	Eval_AUC: 0.8112
+Epoch 0 Global_step 20000	Train_loss: 0.5226	Eval_AUC: 0.8144
+Epoch 0 Global_step 21000	Train_loss: 0.5279	Eval_AUC: 0.8111
+Epoch 0 Global_step 22000	Train_loss: 0.5255	Eval_AUC: 0.8115
+Epoch 0 Global_step 23000	Train_loss: 0.5220	Eval_AUC: 0.8178
+Epoch 0 Global_step 24000	Train_loss: 0.5276	Eval_AUC: 0.8175
+Epoch 0 Global_step 25000	Train_loss: 0.5215	Eval_AUC: 0.8114
+Epoch 0 Global_step 26000	Train_loss: 0.5231	Eval_AUC: 0.8164
+Epoch 0 Global_step 27000	Train_loss: 0.5155	Eval_AUC: 0.8205
+Epoch 0 Global_step 28000	Train_loss: 0.5224	Eval_AUC: 0.8193
+Epoch 0 Global_step 29000	Train_loss: 0.5173	Eval_AUC: 0.8198
+Epoch 0 Global_step 30000	Train_loss: 0.5172	Eval_AUC: 0.8198
+Epoch 0 Global_step 31000	Train_loss: 0.5188	Eval_AUC: 0.8213
+Epoch 0 Global_step 32000	Train_loss: 0.5189	Eval_AUC: 0.8199
+Epoch 0 Global_step 33000	Train_loss: 0.5152	Eval_AUC: 0.8236
+Epoch 0 Global_step 34000	Train_loss: 0.5080	Eval_AUC: 0.8241
+Epoch 0 Global_step 35000	Train_loss: 0.5126	Eval_AUC: 0.8268
+Epoch 0 Global_step 36000	Train_loss: 0.5123	Eval_AUC: 0.8196
+Epoch 0 Global_step 37000	Train_loss: 0.5140	Eval_AUC: 0.8220
+Epoch 0 Global_step 38000	Train_loss: 0.5077	Eval_AUC: 0.8263
+Epoch 0 Global_step 39000	Train_loss: 0.5119	Eval_AUC: 0.8296
+Epoch 0 Global_step 40000	Train_loss: 0.5084	Eval_AUC: 0.8262
+Epoch 0 Global_step 41000	Train_loss: 0.5044	Eval_AUC: 0.8265
+Epoch 0 Global_step 42000	Train_loss: 0.5073	Eval_AUC: 0.8257
+Epoch 0 Global_step 43000	Train_loss: 0.5064	Eval_AUC: 0.8231
+Epoch 0 Global_step 44000	Train_loss: 0.5078	Eval_AUC: 0.8269
+Epoch 0 Global_step 45000	Train_loss: 0.5029	Eval_AUC: 0.8263
+Epoch 0 Global_step 46000	Train_loss: 0.5087	Eval_AUC: 0.8258
+Epoch 0 Global_step 47000	Train_loss: 0.5021	Eval_AUC: 0.8308
+Epoch 0 Global_step 48000	Train_loss: 0.5021	Eval_AUC: 0.8291
+Epoch 0 Global_step 49000	Train_loss: 0.5021	Eval_AUC: 0.8299
+Epoch 0 Global_step 50000	Train_loss: 0.5037	Eval_AUC: 0.8286
+Epoch 0 Global_step 51000	Train_loss: 0.5008	Eval_AUC: 0.8310
+Epoch 0 Global_step 52000	Train_loss: 0.5014	Eval_AUC: 0.8330
+Epoch 0 Global_step 53000	Train_loss: 0.5000	Eval_AUC: 0.8297
+Epoch 0 Global_step 54000	Train_loss: 0.4960	Eval_AUC: 0.8353
+Epoch 0 Global_step 55000	Train_loss: 0.4982	Eval_AUC: 0.8313
+Epoch 0 Global_step 56000	Train_loss: 0.4922	Eval_AUC: 0.8326
+Epoch 0 Global_step 57000	Train_loss: 0.5000	Eval_AUC: 0.8267
+Epoch 0 Global_step 58000	Train_loss: 0.4970	Eval_AUC: 0.8365
+Epoch 0 Global_step 59000	Train_loss: 0.4973	Eval_AUC: 0.8353
+Epoch 0 Global_step 60000	Train_loss: 0.4972	Eval_AUC: 0.8364
+Epoch 0 Global_step 61000	Train_loss: 0.4961	Eval_AUC: 0.8347
+Epoch 0 Global_step 62000	Train_loss: 0.4972	Eval_AUC: 0.8328
+Epoch 0 Global_step 63000	Train_loss: 0.4956	Eval_AUC: 0.8332
+Epoch 0 Global_step 64000	Train_loss: 0.4956	Eval_AUC: 0.8361
+Epoch 0 Global_step 65000	Train_loss: 0.4935	Eval_AUC: 0.8350
+Epoch 0 Global_step 66000	Train_loss: 0.4958	Eval_AUC: 0.8386
+Epoch 0 Global_step 67000	Train_loss: 0.4939	Eval_AUC: 0.8392
+Epoch 0 Global_step 68000	Train_loss: 0.4933	Eval_AUC: 0.8340
+Epoch 0 Global_step 69000	Train_loss: 0.4922	Eval_AUC: 0.8401
+Epoch 0 Global_step 70000	Train_loss: 0.4887	Eval_AUC: 0.8413
+Epoch 0 Global_step 71000	Train_loss: 0.4924	Eval_AUC: 0.8400
+Epoch 0 Global_step 72000	Train_loss: 0.4890	Eval_AUC: 0.8370
+Epoch 0 Global_step 73000	Train_loss: 0.4899	Eval_AUC: 0.8424
+Epoch 0 Global_step 74000	Train_loss: 0.4846	Eval_AUC: 0.8386
+Epoch 0 Global_step 75000	Train_loss: 0.4916	Eval_AUC: 0.8420
+Epoch 0 Global_step 76000	Train_loss: 0.4889	Eval_AUC: 0.8442
+Epoch 0 Global_step 77000	Train_loss: 0.4843	Eval_AUC: 0.8406
+Epoch 0 Global_step 78000	Train_loss: 0.4822	Eval_AUC: 0.8474
+Epoch 0 Global_step 79000	Train_loss: 0.4825	Eval_AUC: 0.8406
+Epoch 0 Global_step 80000	Train_loss: 0.4801	Eval_AUC: 0.8433
+Epoch 0 Global_step 81000	Train_loss: 0.4829	Eval_AUC: 0.8413
+Epoch 0 DONE	Cost time: 3167.59
+Epoch 1 Global_step 82000	Train_loss: 0.4706	Eval_AUC: 0.8502
+Epoch 1 Global_step 83000	Train_loss: 0.4557	Eval_AUC: 0.8438
+Epoch 1 Global_step 84000	Train_loss: 0.4575	Eval_AUC: 0.8442
+Epoch 1 Global_step 85000	Train_loss: 0.4593	Eval_AUC: 0.8472
+Epoch 1 Global_step 86000	Train_loss: 0.4579	Eval_AUC: 0.8404
+Epoch 1 Global_step 87000	Train_loss: 0.4575	Eval_AUC: 0.8471
+Epoch 1 Global_step 88000	Train_loss: 0.4586	Eval_AUC: 0.8484
+Epoch 1 Global_step 89000	Train_loss: 0.4579	Eval_AUC: 0.8480
+Epoch 1 Global_step 90000	Train_loss: 0.4550	Eval_AUC: 0.8410
+Epoch 1 Global_step 91000	Train_loss: 0.4614	Eval_AUC: 0.8485
+Epoch 1 Global_step 92000	Train_loss: 0.4601	Eval_AUC: 0.8489
+Epoch 1 Global_step 93000	Train_loss: 0.4569	Eval_AUC: 0.8472
+Epoch 1 Global_step 94000	Train_loss: 0.4557	Eval_AUC: 0.8502
+Epoch 1 Global_step 95000	Train_loss: 0.4621	Eval_AUC: 0.8422
+Epoch 1 Global_step 96000	Train_loss: 0.4528	Eval_AUC: 0.8461
+Epoch 1 Global_step 97000	Train_loss: 0.4613	Eval_AUC: 0.8436
+Epoch 1 Global_step 98000	Train_loss: 0.4545	Eval_AUC: 0.8479
+Epoch 1 Global_step 99000	Train_loss: 0.4606	Eval_AUC: 0.8471
+Epoch 1 Global_step 100000	Train_loss: 0.4586	Eval_AUC: 0.8543
+Epoch 1 Global_step 101000	Train_loss: 0.4607	Eval_AUC: 0.8542
+Epoch 1 Global_step 102000	Train_loss: 0.4587	Eval_AUC: 0.8553
+Epoch 1 Global_step 103000	Train_loss: 0.4531	Eval_AUC: 0.8513
+Epoch 1 Global_step 104000	Train_loss: 0.4547	Eval_AUC: 0.8513
+Epoch 1 Global_step 105000	Train_loss: 0.4535	Eval_AUC: 0.8555
+Epoch 1 Global_step 106000	Train_loss: 0.4583	Eval_AUC: 0.8579
+Epoch 1 Global_step 107000	Train_loss: 0.4550	Eval_AUC: 0.8557
+Epoch 1 Global_step 108000	Train_loss: 0.4532	Eval_AUC: 0.8516
+Epoch 1 Global_step 109000	Train_loss: 0.4543	Eval_AUC: 0.8560
+Epoch 1 Global_step 110000	Train_loss: 0.4555	Eval_AUC: 0.8520
+Epoch 1 Global_step 111000	Train_loss: 0.4579	Eval_AUC: 0.8595
+Epoch 1 Global_step 112000	Train_loss: 0.4529	Eval_AUC: 0.8526
+Epoch 1 Global_step 113000	Train_loss: 0.4551	Eval_AUC: 0.8600
+Epoch 1 Global_step 114000	Train_loss: 0.4564	Eval_AUC: 0.8574
+Epoch 1 Global_step 115000	Train_loss: 0.4570	Eval_AUC: 0.8586
+Epoch 1 Global_step 116000	Train_loss: 0.4523	Eval_AUC: 0.8614
+Epoch 1 Global_step 117000	Train_loss: 0.4490	Eval_AUC: 0.8610
+Epoch 1 Global_step 118000	Train_loss: 0.4588	Eval_AUC: 0.8578
+Epoch 1 Global_step 119000	Train_loss: 0.4576	Eval_AUC: 0.8516
+Epoch 1 Global_step 120000	Train_loss: 0.4492	Eval_AUC: 0.8625
+Epoch 1 Global_step 121000	Train_loss: 0.4511	Eval_AUC: 0.8611
+Epoch 1 Global_step 122000	Train_loss: 0.4529	Eval_AUC: 0.8577
+Epoch 1 Global_step 123000	Train_loss: 0.4498	Eval_AUC: 0.8638
+Epoch 1 Global_step 124000	Train_loss: 0.4522	Eval_AUC: 0.8640
+Epoch 1 Global_step 125000	Train_loss: 0.4492	Eval_AUC: 0.8543
+Epoch 1 Global_step 126000	Train_loss: 0.4524	Eval_AUC: 0.8593
+Epoch 1 Global_step 127000	Train_loss: 0.4538	Eval_AUC: 0.8567
+Epoch 1 Global_step 128000	Train_loss: 0.4481	Eval_AUC: 0.8609
+Epoch 1 Global_step 129000	Train_loss: 0.4454	Eval_AUC: 0.8606
+Epoch 1 Global_step 130000	Train_loss: 0.4459	Eval_AUC: 0.8614
+Epoch 1 Global_step 131000	Train_loss: 0.4466	Eval_AUC: 0.8648
+Epoch 1 Global_step 132000	Train_loss: 0.4499	Eval_AUC: 0.8657
+Epoch 1 Global_step 133000	Train_loss: 0.4479	Eval_AUC: 0.8611
+Epoch 1 Global_step 134000	Train_loss: 0.4429	Eval_AUC: 0.8619
+Epoch 1 Global_step 135000	Train_loss: 0.4439	Eval_AUC: 0.8640
+Epoch 1 Global_step 136000	Train_loss: 0.4473	Eval_AUC: 0.8651
+Epoch 1 Global_step 137000	Train_loss: 0.4473	Eval_AUC: 0.8692
+Epoch 1 Global_step 138000	Train_loss: 0.4405	Eval_AUC: 0.8696
+Epoch 1 Global_step 139000	Train_loss: 0.4421	Eval_AUC: 0.8683
+Epoch 1 Global_step 140000	Train_loss: 0.4471	Eval_AUC: 0.8647
+Epoch 1 Global_step 141000	Train_loss: 0.4433	Eval_AUC: 0.8678
+Epoch 1 Global_step 142000	Train_loss: 0.4464	Eval_AUC: 0.8656
+Epoch 1 Global_step 143000	Train_loss: 0.4403	Eval_AUC: 0.8665
+Epoch 1 Global_step 144000	Train_loss: 0.4378	Eval_AUC: 0.8633
+Epoch 1 Global_step 145000	Train_loss: 0.4378	Eval_AUC: 0.8689
+Epoch 1 Global_step 146000	Train_loss: 0.4420	Eval_AUC: 0.8614
+Epoch 1 Global_step 147000	Train_loss: 0.4360	Eval_AUC: 0.8651
+Epoch 1 Global_step 148000	Train_loss: 0.4478	Eval_AUC: 0.8669
+Epoch 1 Global_step 149000	Train_loss: 0.4380	Eval_AUC: 0.8699
+Epoch 1 Global_step 150000	Train_loss: 0.4370	Eval_AUC: 0.8713
+Epoch 1 Global_step 151000	Train_loss: 0.4372	Eval_AUC: 0.8655
+Epoch 1 Global_step 152000	Train_loss: 0.4391	Eval_AUC: 0.8746
+Epoch 1 Global_step 153000	Train_loss: 0.4382	Eval_AUC: 0.8694
+Epoch 1 Global_step 154000	Train_loss: 0.4411	Eval_AUC: 0.8681
+Epoch 1 Global_step 155000	Train_loss: 0.4375	Eval_AUC: 0.8641
+Epoch 1 Global_step 156000	Train_loss: 0.4352	Eval_AUC: 0.8737
+Epoch 1 Global_step 157000	Train_loss: 0.4382	Eval_AUC: 0.8726
+Epoch 1 Global_step 158000	Train_loss: 0.4367	Eval_AUC: 0.8644
+Epoch 1 Global_step 159000	Train_loss: 0.4297	Eval_AUC: 0.8706
+Epoch 1 Global_step 160000	Train_loss: 0.4382	Eval_AUC: 0.8727
+Epoch 1 Global_step 161000	Train_loss: 0.4339	Eval_AUC: 0.8671
+Epoch 1 Global_step 162000	Train_loss: 0.4416	Eval_AUC: 0.8679
+Epoch 1 Global_step 163000	Train_loss: 0.4338	Eval_AUC: 0.8757
+Epoch 1 DONE	Cost time: 6335.45
+Epoch 2 Global_step 164000	Train_loss: 0.4032	Eval_AUC: 0.8723
+Epoch 2 Global_step 165000	Train_loss: 0.4017	Eval_AUC: 0.8665
+Epoch 2 Global_step 166000	Train_loss: 0.3980	Eval_AUC: 0.8735
+Epoch 2 Global_step 167000	Train_loss: 0.4048	Eval_AUC: 0.8717
+Epoch 2 Global_step 168000	Train_loss: 0.3987	Eval_AUC: 0.8713
+Epoch 2 Global_step 169000	Train_loss: 0.4038	Eval_AUC: 0.8704
+Epoch 2 Global_step 170000	Train_loss: 0.4055	Eval_AUC: 0.8695
+Epoch 2 Global_step 171000	Train_loss: 0.4011	Eval_AUC: 0.8729
+Epoch 2 Global_step 172000	Train_loss: 0.4068	Eval_AUC: 0.8705
+Epoch 2 Global_step 173000	Train_loss: 0.4016	Eval_AUC: 0.8693
+Epoch 2 Global_step 174000	Train_loss: 0.4008	Eval_AUC: 0.8726
+Epoch 2 Global_step 175000	Train_loss: 0.4093	Eval_AUC: 0.8675
+Epoch 2 Global_step 176000	Train_loss: 0.4031	Eval_AUC: 0.8661
+Epoch 2 Global_step 177000	Train_loss: 0.4057	Eval_AUC: 0.8759
+Epoch 2 Global_step 178000	Train_loss: 0.4054	Eval_AUC: 0.8685
+Epoch 2 Global_step 179000	Train_loss: 0.4057	Eval_AUC: 0.8742
+Epoch 2 Global_step 180000	Train_loss: 0.4038	Eval_AUC: 0.8677
+Epoch 2 Global_step 181000	Train_loss: 0.4104	Eval_AUC: 0.8715
+Epoch 2 Global_step 182000	Train_loss: 0.4091	Eval_AUC: 0.8730
+Epoch 2 Global_step 183000	Train_loss: 0.4066	Eval_AUC: 0.8765
+Epoch 2 Global_step 184000	Train_loss: 0.4069	Eval_AUC: 0.8787
+Epoch 2 Global_step 185000	Train_loss: 0.4136	Eval_AUC: 0.8723
+Epoch 2 Global_step 186000	Train_loss: 0.4092	Eval_AUC: 0.8757
+Epoch 2 Global_step 187000	Train_loss: 0.4053	Eval_AUC: 0.8738
+Epoch 2 Global_step 188000	Train_loss: 0.4070	Eval_AUC: 0.8683
+Epoch 2 Global_step 189000	Train_loss: 0.4073	Eval_AUC: 0.8726
+Epoch 2 Global_step 190000	Train_loss: 0.4113	Eval_AUC: 0.8782
+Epoch 2 Global_step 191000	Train_loss: 0.4135	Eval_AUC: 0.8752
+Epoch 2 Global_step 192000	Train_loss: 0.4097	Eval_AUC: 0.8747
+Epoch 2 Global_step 193000	Train_loss: 0.4063	Eval_AUC: 0.8795
+Epoch 2 Global_step 194000	Train_loss: 0.4132	Eval_AUC: 0.8755
+Epoch 2 Global_step 195000	Train_loss: 0.4068	Eval_AUC: 0.8685
+Epoch 2 Global_step 196000	Train_loss: 0.4087	Eval_AUC: 0.8708
+Epoch 2 Global_step 197000	Train_loss: 0.4048	Eval_AUC: 0.8736
+Epoch 2 Global_step 198000	Train_loss: 0.4139	Eval_AUC: 0.8735
+Epoch 2 Global_step 199000	Train_loss: 0.4058	Eval_AUC: 0.8770
+Epoch 2 Global_step 200000	Train_loss: 0.4057	Eval_AUC: 0.8710
+Epoch 2 Global_step 201000	Train_loss: 0.4107	Eval_AUC: 0.8726
+Epoch 2 Global_step 202000	Train_loss: 0.4144	Eval_AUC: 0.8724
+Epoch 2 Global_step 203000	Train_loss: 0.4113	Eval_AUC: 0.8717
+Epoch 2 Global_step 204000	Train_loss: 0.4095	Eval_AUC: 0.8722
+Epoch 2 Global_step 205000	Train_loss: 0.4110	Eval_AUC: 0.8750
+Epoch 2 Global_step 206000	Train_loss: 0.4044	Eval_AUC: 0.8704
+Epoch 2 Global_step 207000	Train_loss: 0.4074	Eval_AUC: 0.8755
+Epoch 2 Global_step 208000	Train_loss: 0.4117	Eval_AUC: 0.8680
+Epoch 2 Global_step 209000	Train_loss: 0.4045	Eval_AUC: 0.8784
+Epoch 2 Global_step 210000	Train_loss: 0.4072	Eval_AUC: 0.8740
+Epoch 2 Global_step 211000	Train_loss: 0.4076	Eval_AUC: 0.8756
+Epoch 2 Global_step 212000	Train_loss: 0.4048	Eval_AUC: 0.8790
+Epoch 2 Global_step 213000	Train_loss: 0.4039	Eval_AUC: 0.8756
+Epoch 2 Global_step 214000	Train_loss: 0.4138	Eval_AUC: 0.8818
+model saved at save_path/atrank-214000
+Epoch 2 Global_step 215000	Train_loss: 0.4059	Eval_AUC: 0.8773
+Epoch 2 Global_step 216000	Train_loss: 0.4081	Eval_AUC: 0.8794
+Epoch 2 Global_step 217000	Train_loss: 0.4054	Eval_AUC: 0.8837
+model saved at save_path/atrank-217000
+Epoch 2 Global_step 218000	Train_loss: 0.4088	Eval_AUC: 0.8832
+Epoch 2 Global_step 219000	Train_loss: 0.4104	Eval_AUC: 0.8863
+model saved at save_path/atrank-219000
+Epoch 2 Global_step 220000	Train_loss: 0.4015	Eval_AUC: 0.8805
+Epoch 2 Global_step 221000	Train_loss: 0.4076	Eval_AUC: 0.8756
+Epoch 2 Global_step 222000	Train_loss: 0.4122	Eval_AUC: 0.8839
+Epoch 2 Global_step 223000	Train_loss: 0.4077	Eval_AUC: 0.8756
+Epoch 2 Global_step 224000	Train_loss: 0.4094	Eval_AUC: 0.8777
+Epoch 2 Global_step 225000	Train_loss: 0.4120	Eval_AUC: 0.8803
+Epoch 2 Global_step 226000	Train_loss: 0.4053	Eval_AUC: 0.8794
+Epoch 2 Global_step 227000	Train_loss: 0.4072	Eval_AUC: 0.8780
+Epoch 2 Global_step 228000	Train_loss: 0.4058	Eval_AUC: 0.8799
+Epoch 2 Global_step 229000	Train_loss: 0.4130	Eval_AUC: 0.8813
+Epoch 2 Global_step 230000	Train_loss: 0.4074	Eval_AUC: 0.8804
+Epoch 2 Global_step 231000	Train_loss: 0.4064	Eval_AUC: 0.8692
+Epoch 2 Global_step 232000	Train_loss: 0.4113	Eval_AUC: 0.8826
+Epoch 2 Global_step 233000	Train_loss: 0.4048	Eval_AUC: 0.8786
+Epoch 2 Global_step 234000	Train_loss: 0.4088	Eval_AUC: 0.8756
+Epoch 2 Global_step 235000	Train_loss: 0.4038	Eval_AUC: 0.8771
+Epoch 2 Global_step 236000	Train_loss: 0.4063	Eval_AUC: 0.8828
+Epoch 2 Global_step 237000	Train_loss: 0.4080	Eval_AUC: 0.8789
+Epoch 2 Global_step 238000	Train_loss: 0.4021	Eval_AUC: 0.8797
+Epoch 2 Global_step 239000	Train_loss: 0.4088	Eval_AUC: 0.8767
+Epoch 2 Global_step 240000	Train_loss: 0.4090	Eval_AUC: 0.8773
+Epoch 2 Global_step 241000	Train_loss: 0.4039	Eval_AUC: 0.8775
+Epoch 2 Global_step 242000	Train_loss: 0.4115	Eval_AUC: 0.8844
+Epoch 2 Global_step 243000	Train_loss: 0.4000	Eval_AUC: 0.8804
+Epoch 2 Global_step 244000	Train_loss: 0.4048	Eval_AUC: 0.8822
+Epoch 2 DONE	Cost time: 9495.72
+Epoch 3 Global_step 245000	Train_loss: 0.3877	Eval_AUC: 0.8875
+model saved at save_path/atrank-245000
+Epoch 3 Global_step 246000	Train_loss: 0.3636	Eval_AUC: 0.8860
+Epoch 3 Global_step 247000	Train_loss: 0.3575	Eval_AUC: 0.8863
+Epoch 3 Global_step 248000	Train_loss: 0.3633	Eval_AUC: 0.8819
+Epoch 3 Global_step 249000	Train_loss: 0.3620	Eval_AUC: 0.8807
+Epoch 3 Global_step 250000	Train_loss: 0.3662	Eval_AUC: 0.8816
+Epoch 3 Global_step 251000	Train_loss: 0.3642	Eval_AUC: 0.8842
+Epoch 3 Global_step 252000	Train_loss: 0.3662	Eval_AUC: 0.8848
+Epoch 3 Global_step 253000	Train_loss: 0.3627	Eval_AUC: 0.8837
+Epoch 3 Global_step 254000	Train_loss: 0.3681	Eval_AUC: 0.8815
+Epoch 3 Global_step 255000	Train_loss: 0.3645	Eval_AUC: 0.8757
+Epoch 3 Global_step 256000	Train_loss: 0.3690	Eval_AUC: 0.8780
+Epoch 3 Global_step 257000	Train_loss: 0.3724	Eval_AUC: 0.8800
+Epoch 3 Global_step 258000	Train_loss: 0.3706	Eval_AUC: 0.8831
+Epoch 3 Global_step 259000	Train_loss: 0.3710	Eval_AUC: 0.8819
+Epoch 3 Global_step 260000	Train_loss: 0.3689	Eval_AUC: 0.8748
+Epoch 3 Global_step 261000	Train_loss: 0.3687	Eval_AUC: 0.8813
+Epoch 3 Global_step 262000	Train_loss: 0.3703	Eval_AUC: 0.8821
+Epoch 3 Global_step 263000	Train_loss: 0.3680	Eval_AUC: 0.8772
+Epoch 3 Global_step 264000	Train_loss: 0.3750	Eval_AUC: 0.8838
+Epoch 3 Global_step 265000	Train_loss: 0.3754	Eval_AUC: 0.8801
+Epoch 3 Global_step 266000	Train_loss: 0.3745	Eval_AUC: 0.8830
+Epoch 3 Global_step 267000	Train_loss: 0.3795	Eval_AUC: 0.8816
+Epoch 3 Global_step 268000	Train_loss: 0.3738	Eval_AUC: 0.8799
+Epoch 3 Global_step 269000	Train_loss: 0.3800	Eval_AUC: 0.8824
+Epoch 3 Global_step 270000	Train_loss: 0.3791	Eval_AUC: 0.8751
+Epoch 3 Global_step 271000	Train_loss: 0.3766	Eval_AUC: 0.8731
+Epoch 3 Global_step 272000	Train_loss: 0.3744	Eval_AUC: 0.8821
+Epoch 3 Global_step 273000	Train_loss: 0.3735	Eval_AUC: 0.8815
+Epoch 3 Global_step 274000	Train_loss: 0.3740	Eval_AUC: 0.8795
+Epoch 3 Global_step 275000	Train_loss: 0.3786	Eval_AUC: 0.8801
+Epoch 3 Global_step 276000	Train_loss: 0.3750	Eval_AUC: 0.8812
+Epoch 3 Global_step 277000	Train_loss: 0.3780	Eval_AUC: 0.8812
+Epoch 3 Global_step 278000	Train_loss: 0.3807	Eval_AUC: 0.8809
+Epoch 3 Global_step 279000	Train_loss: 0.3776	Eval_AUC: 0.8803
+Epoch 3 Global_step 280000	Train_loss: 0.3763	Eval_AUC: 0.8840
+Epoch 3 Global_step 281000	Train_loss: 0.3736	Eval_AUC: 0.8836
+Epoch 3 Global_step 282000	Train_loss: 0.3774	Eval_AUC: 0.8791
+Epoch 3 Global_step 283000	Train_loss: 0.3823	Eval_AUC: 0.8807
+Epoch 3 Global_step 284000	Train_loss: 0.3817	Eval_AUC: 0.8799
+Epoch 3 Global_step 285000	Train_loss: 0.3824	Eval_AUC: 0.8860
+Epoch 3 Global_step 286000	Train_loss: 0.3800	Eval_AUC: 0.8808
+Epoch 3 Global_step 287000	Train_loss: 0.3770	Eval_AUC: 0.8784
+Epoch 3 Global_step 288000	Train_loss: 0.3823	Eval_AUC: 0.8833
+Epoch 3 Global_step 289000	Train_loss: 0.3829	Eval_AUC: 0.8842
+Epoch 3 Global_step 290000	Train_loss: 0.3786	Eval_AUC: 0.8834
+Epoch 3 Global_step 291000	Train_loss: 0.3802	Eval_AUC: 0.8813
+Epoch 3 Global_step 292000	Train_loss: 0.3762	Eval_AUC: 0.8833
+Epoch 3 Global_step 293000	Train_loss: 0.3798	Eval_AUC: 0.8827
+Epoch 3 Global_step 294000	Train_loss: 0.3824	Eval_AUC: 0.8836
+Epoch 3 Global_step 295000	Train_loss: 0.3870	Eval_AUC: 0.8818
+Epoch 3 Global_step 296000	Train_loss: 0.3830	Eval_AUC: 0.8838
+Epoch 3 Global_step 297000	Train_loss: 0.3781	Eval_AUC: 0.8860
+Epoch 3 Global_step 298000	Train_loss: 0.3796	Eval_AUC: 0.8799
+Epoch 3 Global_step 299000	Train_loss: 0.3794	Eval_AUC: 0.8790
+Epoch 3 Global_step 300000	Train_loss: 0.3774	Eval_AUC: 0.8839
+Epoch 3 Global_step 301000	Train_loss: 0.3819	Eval_AUC: 0.8821
+Epoch 3 Global_step 302000	Train_loss: 0.3756	Eval_AUC: 0.8822
+Epoch 3 Global_step 303000	Train_loss: 0.3850	Eval_AUC: 0.8866
+Epoch 3 Global_step 304000	Train_loss: 0.3865	Eval_AUC: 0.8858
+Epoch 3 Global_step 305000	Train_loss: 0.3842	Eval_AUC: 0.8798
+Epoch 3 Global_step 306000	Train_loss: 0.3804	Eval_AUC: 0.8844
+Epoch 3 Global_step 307000	Train_loss: 0.3885	Eval_AUC: 0.8805
+Epoch 3 Global_step 308000	Train_loss: 0.3845	Eval_AUC: 0.8830
+Epoch 3 Global_step 309000	Train_loss: 0.3850	Eval_AUC: 0.8887
+model saved at save_path/atrank-309000
+Epoch 3 Global_step 310000	Train_loss: 0.3861	Eval_AUC: 0.8830
+Epoch 3 Global_step 311000	Train_loss: 0.3827	Eval_AUC: 0.8890
+model saved at save_path/atrank-311000
+Epoch 3 Global_step 312000	Train_loss: 0.3902	Eval_AUC: 0.8877
+Epoch 3 Global_step 313000	Train_loss: 0.3810	Eval_AUC: 0.8895
+model saved at save_path/atrank-313000
+Epoch 3 Global_step 314000	Train_loss: 0.3878	Eval_AUC: 0.8853
+Epoch 3 Global_step 315000	Train_loss: 0.3844	Eval_AUC: 0.8843
+Epoch 3 Global_step 316000	Train_loss: 0.3823	Eval_AUC: 0.8809
+Epoch 3 Global_step 317000	Train_loss: 0.3826	Eval_AUC: 0.8866
+Epoch 3 Global_step 318000	Train_loss: 0.3824	Eval_AUC: 0.8862
+Epoch 3 Global_step 319000	Train_loss: 0.3853	Eval_AUC: 0.8853
+Epoch 3 Global_step 320000	Train_loss: 0.3813	Eval_AUC: 0.8831
+Epoch 3 Global_step 321000	Train_loss: 0.3906	Eval_AUC: 0.8822
+Epoch 3 Global_step 322000	Train_loss: 0.3881	Eval_AUC: 0.8803
+Epoch 3 Global_step 323000	Train_loss: 0.3857	Eval_AUC: 0.8841
+Epoch 3 Global_step 324000	Train_loss: 0.3919	Eval_AUC: 0.8919
+model saved at save_path/atrank-324000
+Epoch 3 Global_step 325000	Train_loss: 0.3851	Eval_AUC: 0.8836
+Epoch 3 Global_step 326000	Train_loss: 0.3872	Eval_AUC: 0.8846
+Epoch 3 DONE	Cost time: 12650.94
+Epoch 4 Global_step 327000	Train_loss: 0.3348	Eval_AUC: 0.8825
+Epoch 4 Global_step 328000	Train_loss: 0.3294	Eval_AUC: 0.8797
+Epoch 4 Global_step 329000	Train_loss: 0.3316	Eval_AUC: 0.8876
+Epoch 4 Global_step 330000	Train_loss: 0.3338	Eval_AUC: 0.8836
+Epoch 4 Global_step 331000	Train_loss: 0.3320	Eval_AUC: 0.8850
+Epoch 4 Global_step 332000	Train_loss: 0.3323	Eval_AUC: 0.8811
+Epoch 4 Global_step 333000	Train_loss: 0.3356	Eval_AUC: 0.8841
+Epoch 4 Global_step 334000	Train_loss: 0.3350	Eval_AUC: 0.8797
+Epoch 4 Global_step 335000	Train_loss: 0.3397	Eval_AUC: 0.8820
+Epoch 4 Global_step 336000	Train_loss: 0.3381	Eval_AUC: 0.8817
+Epoch 4 Global_step 337000	Train_loss: 0.3338	Eval_AUC: 0.8843
+Epoch 4 Global_step 338000	Train_loss: 0.3336	Eval_AUC: 0.8847
+Epoch 4 Global_step 339000	Train_loss: 0.3308	Eval_AUC: 0.8850
+Epoch 4 Global_step 340000	Train_loss: 0.3263	Eval_AUC: 0.8875
+Epoch 4 Global_step 341000	Train_loss: 0.3288	Eval_AUC: 0.8855
+Epoch 4 Global_step 342000	Train_loss: 0.3230	Eval_AUC: 0.8842
+Epoch 4 Global_step 343000	Train_loss: 0.3239	Eval_AUC: 0.8871
+Epoch 4 Global_step 344000	Train_loss: 0.3254	Eval_AUC: 0.8868
+Epoch 4 Global_step 345000	Train_loss: 0.3274	Eval_AUC: 0.8863
+Epoch 4 Global_step 346000	Train_loss: 0.3276	Eval_AUC: 0.8867
+Epoch 4 Global_step 347000	Train_loss: 0.3243	Eval_AUC: 0.8866
+Epoch 4 Global_step 348000	Train_loss: 0.3267	Eval_AUC: 0.8874
+Epoch 4 Global_step 349000	Train_loss: 0.3201	Eval_AUC: 0.8874
+Epoch 4 Global_step 350000	Train_loss: 0.3194	Eval_AUC: 0.8871
+Epoch 4 Global_step 351000	Train_loss: 0.3243	Eval_AUC: 0.8887
+Epoch 4 Global_step 352000	Train_loss: 0.3235	Eval_AUC: 0.8878
+Epoch 4 Global_step 353000	Train_loss: 0.3231	Eval_AUC: 0.8872
+Epoch 4 Global_step 354000	Train_loss: 0.3246	Eval_AUC: 0.8868
+Epoch 4 Global_step 355000	Train_loss: 0.3243	Eval_AUC: 0.8856
+Epoch 4 Global_step 356000	Train_loss: 0.3243	Eval_AUC: 0.8870
+Epoch 4 Global_step 357000	Train_loss: 0.3271	Eval_AUC: 0.8880
+Epoch 4 Global_step 358000	Train_loss: 0.3218	Eval_AUC: 0.8877
+Epoch 4 Global_step 359000	Train_loss: 0.3184	Eval_AUC: 0.8875
+Epoch 4 Global_step 360000	Train_loss: 0.3231	Eval_AUC: 0.8876
+Epoch 4 Global_step 361000	Train_loss: 0.3253	Eval_AUC: 0.8874
+Epoch 4 Global_step 362000	Train_loss: 0.3240	Eval_AUC: 0.8873
+Epoch 4 Global_step 363000	Train_loss: 0.3226	Eval_AUC: 0.8882
+Epoch 4 Global_step 364000	Train_loss: 0.3220	Eval_AUC: 0.8870
+Epoch 4 Global_step 365000	Train_loss: 0.3248	Eval_AUC: 0.8879
+Epoch 4 Global_step 366000	Train_loss: 0.3222	Eval_AUC: 0.8891
+Epoch 4 Global_step 367000	Train_loss: 0.3154	Eval_AUC: 0.8871
+Epoch 4 Global_step 368000	Train_loss: 0.3221	Eval_AUC: 0.8889
+Epoch 4 Global_step 369000	Train_loss: 0.3210	Eval_AUC: 0.8878
+Epoch 4 Global_step 370000	Train_loss: 0.3232	Eval_AUC: 0.8882
+Epoch 4 Global_step 371000	Train_loss: 0.3218	Eval_AUC: 0.8866
+Epoch 4 Global_step 372000	Train_loss: 0.3209	Eval_AUC: 0.8877
+Epoch 4 Global_step 373000	Train_loss: 0.3195	Eval_AUC: 0.8883
+Epoch 4 Global_step 374000	Train_loss: 0.3245	Eval_AUC: 0.8868
+Epoch 4 Global_step 375000	Train_loss: 0.3175	Eval_AUC: 0.8872
+Epoch 4 Global_step 376000	Train_loss: 0.3212	Eval_AUC: 0.8870
+Epoch 4 Global_step 377000	Train_loss: 0.3217	Eval_AUC: 0.8886
+Epoch 4 Global_step 378000	Train_loss: 0.3227	Eval_AUC: 0.8891
+Epoch 4 Global_step 379000	Train_loss: 0.3192	Eval_AUC: 0.8885
+Epoch 4 Global_step 380000	Train_loss: 0.3189	Eval_AUC: 0.8883
+Epoch 4 Global_step 381000	Train_loss: 0.3203	Eval_AUC: 0.8893
+Epoch 4 Global_step 382000	Train_loss: 0.3176	Eval_AUC: 0.8877
+Epoch 4 Global_step 383000	Train_loss: 0.3189	Eval_AUC: 0.8881
+Epoch 4 Global_step 384000	Train_loss: 0.3168	Eval_AUC: 0.8871
+Epoch 4 Global_step 385000	Train_loss: 0.3244	Eval_AUC: 0.8879
+Epoch 4 Global_step 386000	Train_loss: 0.3178	Eval_AUC: 0.8871
+Epoch 4 Global_step 387000	Train_loss: 0.3210	Eval_AUC: 0.8884
+Epoch 4 Global_step 388000	Train_loss: 0.3222	Eval_AUC: 0.8879
+Epoch 4 Global_step 389000	Train_loss: 0.3119	Eval_AUC: 0.8899
+Epoch 4 Global_step 390000	Train_loss: 0.3222	Eval_AUC: 0.8897
+Epoch 4 Global_step 391000	Train_loss: 0.3159	Eval_AUC: 0.8900
+Epoch 4 Global_step 392000	Train_loss: 0.3238	Eval_AUC: 0.8895
+Epoch 4 Global_step 393000	Train_loss: 0.3188	Eval_AUC: 0.8897
+Epoch 4 Global_step 394000	Train_loss: 0.3218	Eval_AUC: 0.8889
+Epoch 4 Global_step 395000	Train_loss: 0.3160	Eval_AUC: 0.8874
+Epoch 4 Global_step 396000	Train_loss: 0.3203	Eval_AUC: 0.8909
+Epoch 4 Global_step 397000	Train_loss: 0.3282	Eval_AUC: 0.8890
+Epoch 4 Global_step 398000	Train_loss: 0.3190	Eval_AUC: 0.8874
+Epoch 4 Global_step 399000	Train_loss: 0.3146	Eval_AUC: 0.8889
+Epoch 4 Global_step 400000	Train_loss: 0.3243	Eval_AUC: 0.8897
+Epoch 4 Global_step 401000	Train_loss: 0.3193	Eval_AUC: 0.8884
+Epoch 4 Global_step 402000	Train_loss: 0.3178	Eval_AUC: 0.8891
+Epoch 4 Global_step 403000	Train_loss: 0.3200	Eval_AUC: 0.8878
+Epoch 4 Global_step 404000	Train_loss: 0.3217	Eval_AUC: 0.8896
+Epoch 4 Global_step 405000	Train_loss: 0.3159	Eval_AUC: 0.8873
+Epoch 4 Global_step 406000	Train_loss: 0.3183	Eval_AUC: 0.8884
+Epoch 4 Global_step 407000	Train_loss: 0.3185	Eval_AUC: 0.8876
+Epoch 4 DONE	Cost time: 15785.90
+Epoch 5 Global_step 408000	Train_loss: 0.3123	Eval_AUC: 0.8904
+Epoch 5 Global_step 409000	Train_loss: 0.2982	Eval_AUC: 0.8886
+Epoch 5 Global_step 410000	Train_loss: 0.2968	Eval_AUC: 0.8884
+Epoch 5 Global_step 411000	Train_loss: 0.2946	Eval_AUC: 0.8887
+Epoch 5 Global_step 412000	Train_loss: 0.2968	Eval_AUC: 0.8880
+Epoch 5 Global_step 413000	Train_loss: 0.2924	Eval_AUC: 0.8884
+Epoch 5 Global_step 414000	Train_loss: 0.2921	Eval_AUC: 0.8896
+Epoch 5 Global_step 415000	Train_loss: 0.2947	Eval_AUC: 0.8876
+Epoch 5 Global_step 416000	Train_loss: 0.2974	Eval_AUC: 0.8880
+Epoch 5 Global_step 417000	Train_loss: 0.2945	Eval_AUC: 0.8870
+Epoch 5 Global_step 418000	Train_loss: 0.2927	Eval_AUC: 0.8892
+Epoch 5 Global_step 419000	Train_loss: 0.2931	Eval_AUC: 0.8878
+Epoch 5 Global_step 420000	Train_loss: 0.2926	Eval_AUC: 0.8874
+Epoch 5 Global_step 421000	Train_loss: 0.2993	Eval_AUC: 0.8890
+Epoch 5 Global_step 422000	Train_loss: 0.2962	Eval_AUC: 0.8875
+Epoch 5 Global_step 423000	Train_loss: 0.2940	Eval_AUC: 0.8871
+Epoch 5 Global_step 424000	Train_loss: 0.2974	Eval_AUC: 0.8871
+Epoch 5 Global_step 425000	Train_loss: 0.2978	Eval_AUC: 0.8870
+Epoch 5 Global_step 426000	Train_loss: 0.2945	Eval_AUC: 0.8868
+Epoch 5 Global_step 427000	Train_loss: 0.2917	Eval_AUC: 0.8881
+Epoch 5 Global_step 428000	Train_loss: 0.3007	Eval_AUC: 0.8881
+Epoch 5 Global_step 429000	Train_loss: 0.2983	Eval_AUC: 0.8882
+Epoch 5 Global_step 430000	Train_loss: 0.3014	Eval_AUC: 0.8885
+Epoch 5 Global_step 431000	Train_loss: 0.2964	Eval_AUC: 0.8885
+Epoch 5 Global_step 432000	Train_loss: 0.2951	Eval_AUC: 0.8859
+Epoch 5 Global_step 433000	Train_loss: 0.3017	Eval_AUC: 0.8882
+Epoch 5 Global_step 434000	Train_loss: 0.2987	Eval_AUC: 0.8893
+Epoch 5 Global_step 435000	Train_loss: 0.2929	Eval_AUC: 0.8874
+Epoch 5 Global_step 436000	Train_loss: 0.2970	Eval_AUC: 0.8866
+Epoch 5 Global_step 437000	Train_loss: 0.2967	Eval_AUC: 0.8891
+Epoch 5 Global_step 438000	Train_loss: 0.3002	Eval_AUC: 0.8885
+Epoch 5 Global_step 439000	Train_loss: 0.3005	Eval_AUC: 0.8881
+Epoch 5 Global_step 440000	Train_loss: 0.2986	Eval_AUC: 0.8890
+Epoch 5 Global_step 441000	Train_loss: 0.2968	Eval_AUC: 0.8875
+Epoch 5 Global_step 442000	Train_loss: 0.2965	Eval_AUC: 0.8877
+Epoch 5 Global_step 443000	Train_loss: 0.2952	Eval_AUC: 0.8862
+Epoch 5 Global_step 444000	Train_loss: 0.2976	Eval_AUC: 0.8887
+Epoch 5 Global_step 445000	Train_loss: 0.2979	Eval_AUC: 0.8873
+Epoch 5 Global_step 446000	Train_loss: 0.2985	Eval_AUC: 0.8883
+Epoch 5 Global_step 447000	Train_loss: 0.2983	Eval_AUC: 0.8876
+Epoch 5 Global_step 448000	Train_loss: 0.2970	Eval_AUC: 0.8873
+Epoch 5 Global_step 449000	Train_loss: 0.2999	Eval_AUC: 0.8881
+Epoch 5 Global_step 450000	Train_loss: 0.2984	Eval_AUC: 0.8876
+Epoch 5 Global_step 451000	Train_loss: 0.2952	Eval_AUC: 0.8877
+Epoch 5 Global_step 452000	Train_loss: 0.2990	Eval_AUC: 0.8883
+Epoch 5 Global_step 453000	Train_loss: 0.3010	Eval_AUC: 0.8892
+Epoch 5 Global_step 454000	Train_loss: 0.3019	Eval_AUC: 0.8881
+Epoch 5 Global_step 455000	Train_loss: 0.2984	Eval_AUC: 0.8883
+Epoch 5 Global_step 456000	Train_loss: 0.2982	Eval_AUC: 0.8881
+Epoch 5 Global_step 457000	Train_loss: 0.3032	Eval_AUC: 0.8864
+Epoch 5 Global_step 458000	Train_loss: 0.2990	Eval_AUC: 0.8883
+Epoch 5 Global_step 459000	Train_loss: 0.2977	Eval_AUC: 0.8887
+Epoch 5 Global_step 460000	Train_loss: 0.2947	Eval_AUC: 0.8880
+Epoch 5 Global_step 461000	Train_loss: 0.2965	Eval_AUC: 0.8895
+Epoch 5 Global_step 462000	Train_loss: 0.2985	Eval_AUC: 0.8888
+Epoch 5 Global_step 463000	Train_loss: 0.3006	Eval_AUC: 0.8895
+Epoch 5 Global_step 464000	Train_loss: 0.2970	Eval_AUC: 0.8891
+Epoch 5 Global_step 465000	Train_loss: 0.2978	Eval_AUC: 0.8884
+Epoch 5 Global_step 466000	Train_loss: 0.2995	Eval_AUC: 0.8877
+Epoch 5 Global_step 467000	Train_loss: 0.2974	Eval_AUC: 0.8873
+Epoch 5 Global_step 468000	Train_loss: 0.2964	Eval_AUC: 0.8876
+Epoch 5 Global_step 469000	Train_loss: 0.2947	Eval_AUC: 0.8880
+Epoch 5 Global_step 470000	Train_loss: 0.2990	Eval_AUC: 0.8880
+Epoch 5 Global_step 471000	Train_loss: 0.2980	Eval_AUC: 0.8890
+Epoch 5 Global_step 472000	Train_loss: 0.2962	Eval_AUC: 0.8873
+Epoch 5 Global_step 473000	Train_loss: 0.2973	Eval_AUC: 0.8881
+Epoch 5 Global_step 474000	Train_loss: 0.2998	Eval_AUC: 0.8866
+Epoch 5 Global_step 475000	Train_loss: 0.2968	Eval_AUC: 0.8887
+Epoch 5 Global_step 476000	Train_loss: 0.2971	Eval_AUC: 0.8866
+Epoch 5 Global_step 477000	Train_loss: 0.2997	Eval_AUC: 0.8889
+Epoch 5 Global_step 478000	Train_loss: 0.2960	Eval_AUC: 0.8898
+Epoch 5 Global_step 479000	Train_loss: 0.3001	Eval_AUC: 0.8876
+Epoch 5 Global_step 480000	Train_loss: 0.2918	Eval_AUC: 0.8884
+Epoch 5 Global_step 481000	Train_loss: 0.3020	Eval_AUC: 0.8890
+Epoch 5 Global_step 482000	Train_loss: 0.3028	Eval_AUC: 0.8872
+Epoch 5 Global_step 483000	Train_loss: 0.3016	Eval_AUC: 0.8885
+Epoch 5 Global_step 484000	Train_loss: 0.3027	Eval_AUC: 0.8879
+Epoch 5 Global_step 485000	Train_loss: 0.2965	Eval_AUC: 0.8882
+Epoch 5 Global_step 486000	Train_loss: 0.2969	Eval_AUC: 0.8887
+Epoch 5 Global_step 487000	Train_loss: 0.2983	Eval_AUC: 0.8875
+Epoch 5 Global_step 488000	Train_loss: 0.3007	Eval_AUC: 0.8880
+Epoch 5 Global_step 489000	Train_loss: 0.2995	Eval_AUC: 0.8875
+Epoch 5 DONE	Cost time: 18957.62
+Epoch 6 Global_step 490000	Train_loss: 0.2890	Eval_AUC: 0.8883
+Epoch 6 Global_step 491000	Train_loss: 0.2787	Eval_AUC: 0.8885
+Epoch 6 Global_step 492000	Train_loss: 0.2807	Eval_AUC: 0.8859
+Epoch 6 Global_step 493000	Train_loss: 0.2764	Eval_AUC: 0.8858
+Epoch 6 Global_step 494000	Train_loss: 0.2840	Eval_AUC: 0.8878
+Epoch 6 Global_step 495000	Train_loss: 0.2830	Eval_AUC: 0.8870
+Epoch 6 Global_step 496000	Train_loss: 0.2860	Eval_AUC: 0.8883
+Epoch 6 Global_step 497000	Train_loss: 0.2795	Eval_AUC: 0.8872
+Epoch 6 Global_step 498000	Train_loss: 0.2798	Eval_AUC: 0.8862
+Epoch 6 Global_step 499000	Train_loss: 0.2840	Eval_AUC: 0.8867
+Epoch 6 Global_step 500000	Train_loss: 0.2841	Eval_AUC: 0.8881
+Epoch 6 Global_step 501000	Train_loss: 0.2822	Eval_AUC: 0.8868
+Epoch 6 Global_step 502000	Train_loss: 0.2821	Eval_AUC: 0.8857
+Epoch 6 Global_step 503000	Train_loss: 0.2840	Eval_AUC: 0.8858
+Epoch 6 Global_step 504000	Train_loss: 0.2826	Eval_AUC: 0.8866
+Epoch 6 Global_step 505000	Train_loss: 0.2821	Eval_AUC: 0.8868
+Epoch 6 Global_step 506000	Train_loss: 0.2869	Eval_AUC: 0.8875
+Epoch 6 Global_step 507000	Train_loss: 0.2816	Eval_AUC: 0.8856
+Epoch 6 Global_step 508000	Train_loss: 0.2812	Eval_AUC: 0.8863
+Epoch 6 Global_step 509000	Train_loss: 0.2858	Eval_AUC: 0.8864
+Epoch 6 Global_step 510000	Train_loss: 0.2836	Eval_AUC: 0.8877
+Epoch 6 Global_step 511000	Train_loss: 0.2858	Eval_AUC: 0.8863
+Epoch 6 Global_step 512000	Train_loss: 0.2873	Eval_AUC: 0.8878
+Epoch 6 Global_step 513000	Train_loss: 0.2903	Eval_AUC: 0.8863
+Epoch 6 Global_step 514000	Train_loss: 0.2816	Eval_AUC: 0.8880
+Epoch 6 Global_step 515000	Train_loss: 0.2831	Eval_AUC: 0.8858
+Epoch 6 Global_step 516000	Train_loss: 0.2824	Eval_AUC: 0.8871
+Epoch 6 Global_step 517000	Train_loss: 0.2841	Eval_AUC: 0.8872
+Epoch 6 Global_step 518000	Train_loss: 0.2825	Eval_AUC: 0.8866
+Epoch 6 Global_step 519000	Train_loss: 0.2798	Eval_AUC: 0.8844
+Epoch 6 Global_step 520000	Train_loss: 0.2887	Eval_AUC: 0.8870
+Epoch 6 Global_step 521000	Train_loss: 0.2838	Eval_AUC: 0.8875
+Epoch 6 Global_step 522000	Train_loss: 0.2872	Eval_AUC: 0.8875
+Epoch 6 Global_step 523000	Train_loss: 0.2826	Eval_AUC: 0.8858
+Epoch 6 Global_step 524000	Train_loss: 0.2833	Eval_AUC: 0.8869
+Epoch 6 Global_step 525000	Train_loss: 0.2812	Eval_AUC: 0.8859
+Epoch 6 Global_step 526000	Train_loss: 0.2866	Eval_AUC: 0.8876
+Epoch 6 Global_step 527000	Train_loss: 0.2855	Eval_AUC: 0.8867
+Epoch 6 Global_step 528000	Train_loss: 0.2828	Eval_AUC: 0.8874
+Epoch 6 Global_step 529000	Train_loss: 0.2802	Eval_AUC: 0.8893
+Epoch 6 Global_step 530000	Train_loss: 0.2864	Eval_AUC: 0.8863
+Epoch 6 Global_step 531000	Train_loss: 0.2796	Eval_AUC: 0.8886
+Epoch 6 Global_step 532000	Train_loss: 0.2875	Eval_AUC: 0.8877
+Epoch 6 Global_step 533000	Train_loss: 0.2871	Eval_AUC: 0.8865
+Epoch 6 Global_step 534000	Train_loss: 0.2885	Eval_AUC: 0.8867
+Epoch 6 Global_step 535000	Train_loss: 0.2892	Eval_AUC: 0.8874
+Epoch 6 Global_step 536000	Train_loss: 0.2835	Eval_AUC: 0.8872
+Epoch 6 Global_step 537000	Train_loss: 0.2835	Eval_AUC: 0.8856
+Epoch 6 Global_step 538000	Train_loss: 0.2845	Eval_AUC: 0.8857
+Epoch 6 Global_step 539000	Train_loss: 0.2859	Eval_AUC: 0.8863
+Epoch 6 Global_step 540000	Train_loss: 0.2879	Eval_AUC: 0.8875
+Epoch 6 Global_step 541000	Train_loss: 0.2880	Eval_AUC: 0.8873
+Epoch 6 Global_step 542000	Train_loss: 0.2816	Eval_AUC: 0.8873
+Epoch 6 Global_step 543000	Train_loss: 0.2877	Eval_AUC: 0.8879
+Epoch 6 Global_step 544000	Train_loss: 0.2902	Eval_AUC: 0.8857
+Epoch 6 Global_step 545000	Train_loss: 0.2856	Eval_AUC: 0.8856
+Epoch 6 Global_step 546000	Train_loss: 0.2910	Eval_AUC: 0.8877
+Epoch 6 Global_step 547000	Train_loss: 0.2841	Eval_AUC: 0.8866
+Epoch 6 Global_step 548000	Train_loss: 0.2922	Eval_AUC: 0.8869
+Epoch 6 Global_step 549000	Train_loss: 0.2855	Eval_AUC: 0.8872
+Epoch 6 Global_step 550000	Train_loss: 0.2906	Eval_AUC: 0.8867
+Epoch 6 Global_step 551000	Train_loss: 0.2825	Eval_AUC: 0.8879
+Epoch 6 Global_step 552000	Train_loss: 0.2852	Eval_AUC: 0.8879
+Epoch 6 Global_step 553000	Train_loss: 0.2889	Eval_AUC: 0.8858
+Epoch 6 Global_step 554000	Train_loss: 0.2886	Eval_AUC: 0.8878
+Epoch 6 Global_step 555000	Train_loss: 0.2875	Eval_AUC: 0.8869
+Epoch 6 Global_step 556000	Train_loss: 0.2863	Eval_AUC: 0.8867
+Epoch 6 Global_step 557000	Train_loss: 0.2877	Eval_AUC: 0.8873
+Epoch 6 Global_step 558000	Train_loss: 0.2890	Eval_AUC: 0.8881
+Epoch 6 Global_step 559000	Train_loss: 0.2870	Eval_AUC: 0.8866
+Epoch 6 Global_step 560000	Train_loss: 0.2815	Eval_AUC: 0.8862
+Epoch 6 Global_step 561000	Train_loss: 0.2898	Eval_AUC: 0.8877
+Epoch 6 Global_step 562000	Train_loss: 0.2912	Eval_AUC: 0.8872
+Epoch 6 Global_step 563000	Train_loss: 0.2863	Eval_AUC: 0.8861
+Epoch 6 Global_step 564000	Train_loss: 0.2852	Eval_AUC: 0.8868
+Epoch 6 Global_step 565000	Train_loss: 0.2915	Eval_AUC: 0.8865
+Epoch 6 Global_step 566000	Train_loss: 0.2839	Eval_AUC: 0.8875
+Epoch 6 Global_step 567000	Train_loss: 0.2883	Eval_AUC: 0.8871
+Epoch 6 Global_step 568000	Train_loss: 0.2879	Eval_AUC: 0.8857
+Epoch 6 Global_step 569000	Train_loss: 0.2895	Eval_AUC: 0.8879
+Epoch 6 Global_step 570000	Train_loss: 0.2947	Eval_AUC: 0.8872
+Epoch 6 DONE	Cost time: 22098.58
+Epoch 7 Global_step 571000	Train_loss: 0.2826	Eval_AUC: 0.8884
+Epoch 7 Global_step 572000	Train_loss: 0.2679	Eval_AUC: 0.8869
+Epoch 7 Global_step 573000	Train_loss: 0.2659	Eval_AUC: 0.8863
+Epoch 7 Global_step 574000	Train_loss: 0.2681	Eval_AUC: 0.8868
+Epoch 7 Global_step 575000	Train_loss: 0.2671	Eval_AUC: 0.8865
+Epoch 7 Global_step 576000	Train_loss: 0.2684	Eval_AUC: 0.8863
+Epoch 7 Global_step 577000	Train_loss: 0.2696	Eval_AUC: 0.8864
+Epoch 7 Global_step 578000	Train_loss: 0.2709	Eval_AUC: 0.8858
+Epoch 7 Global_step 579000	Train_loss: 0.2688	Eval_AUC: 0.8856
+Epoch 7 Global_step 580000	Train_loss: 0.2658	Eval_AUC: 0.8846
+Epoch 7 Global_step 581000	Train_loss: 0.2701	Eval_AUC: 0.8854
+Epoch 7 Global_step 582000	Train_loss: 0.2693	Eval_AUC: 0.8863
+Epoch 7 Global_step 583000	Train_loss: 0.2681	Eval_AUC: 0.8860
+Epoch 7 Global_step 584000	Train_loss: 0.2735	Eval_AUC: 0.8859
+Epoch 7 Global_step 585000	Train_loss: 0.2684	Eval_AUC: 0.8854
+Epoch 7 Global_step 586000	Train_loss: 0.2685	Eval_AUC: 0.8848
+Epoch 7 Global_step 587000	Train_loss: 0.2736	Eval_AUC: 0.8851
+Epoch 7 Global_step 588000	Train_loss: 0.2722	Eval_AUC: 0.8845
+Epoch 7 Global_step 589000	Train_loss: 0.2720	Eval_AUC: 0.8871
+Epoch 7 Global_step 590000	Train_loss: 0.2668	Eval_AUC: 0.8863
+Epoch 7 Global_step 591000	Train_loss: 0.2738	Eval_AUC: 0.8847
+Epoch 7 Global_step 592000	Train_loss: 0.2756	Eval_AUC: 0.8850
+Epoch 7 Global_step 593000	Train_loss: 0.2739	Eval_AUC: 0.8857
+Epoch 7 Global_step 594000	Train_loss: 0.2694	Eval_AUC: 0.8860
+Epoch 7 Global_step 595000	Train_loss: 0.2718	Eval_AUC: 0.8849
+Epoch 7 Global_step 596000	Train_loss: 0.2738	Eval_AUC: 0.8825
+Epoch 7 Global_step 597000	Train_loss: 0.2725	Eval_AUC: 0.8865
+Epoch 7 Global_step 598000	Train_loss: 0.2745	Eval_AUC: 0.8863
+Epoch 7 Global_step 599000	Train_loss: 0.2707	Eval_AUC: 0.8854
+Epoch 7 Global_step 600000	Train_loss: 0.2744	Eval_AUC: 0.8847
+Epoch 7 Global_step 601000	Train_loss: 0.2705	Eval_AUC: 0.8853
+Epoch 7 Global_step 602000	Train_loss: 0.2736	Eval_AUC: 0.8860
+Epoch 7 Global_step 603000	Train_loss: 0.2736	Eval_AUC: 0.8859
+Epoch 7 Global_step 604000	Train_loss: 0.2712	Eval_AUC: 0.8851
+Epoch 7 Global_step 605000	Train_loss: 0.2742	Eval_AUC: 0.8864
+Epoch 7 Global_step 606000	Train_loss: 0.2743	Eval_AUC: 0.8858
+Epoch 7 Global_step 607000	Train_loss: 0.2724	Eval_AUC: 0.8858
+Epoch 7 Global_step 608000	Train_loss: 0.2693	Eval_AUC: 0.8866
+Epoch 7 Global_step 609000	Train_loss: 0.2769	Eval_AUC: 0.8852
+Epoch 7 Global_step 610000	Train_loss: 0.2736	Eval_AUC: 0.8867
+Epoch 7 Global_step 611000	Train_loss: 0.2718	Eval_AUC: 0.8844
+Epoch 7 Global_step 612000	Train_loss: 0.2720	Eval_AUC: 0.8863
+Epoch 7 Global_step 613000	Train_loss: 0.2766	Eval_AUC: 0.8850
+Epoch 7 Global_step 614000	Train_loss: 0.2736	Eval_AUC: 0.8852
+Epoch 7 Global_step 615000	Train_loss: 0.2721	Eval_AUC: 0.8862
+Epoch 7 Global_step 616000	Train_loss: 0.2749	Eval_AUC: 0.8856
+Epoch 7 Global_step 617000	Train_loss: 0.2744	Eval_AUC: 0.8856
+Epoch 7 Global_step 618000	Train_loss: 0.2748	Eval_AUC: 0.8852
+Epoch 7 Global_step 619000	Train_loss: 0.2729	Eval_AUC: 0.8864
+Epoch 7 Global_step 620000	Train_loss: 0.2745	Eval_AUC: 0.8847
+Epoch 7 Global_step 621000	Train_loss: 0.2746	Eval_AUC: 0.8866
+Epoch 7 Global_step 622000	Train_loss: 0.2758	Eval_AUC: 0.8865
+Epoch 7 Global_step 623000	Train_loss: 0.2759	Eval_AUC: 0.8864
+Epoch 7 Global_step 624000	Train_loss: 0.2783	Eval_AUC: 0.8844
+Epoch 7 Global_step 625000	Train_loss: 0.2746	Eval_AUC: 0.8853
+Epoch 7 Global_step 626000	Train_loss: 0.2750	Eval_AUC: 0.8854
+Epoch 7 Global_step 627000	Train_loss: 0.2795	Eval_AUC: 0.8865
+Epoch 7 Global_step 628000	Train_loss: 0.2799	Eval_AUC: 0.8851
+Epoch 7 Global_step 629000	Train_loss: 0.2755	Eval_AUC: 0.8859
+Epoch 7 Global_step 630000	Train_loss: 0.2738	Eval_AUC: 0.8840
+Epoch 7 Global_step 631000	Train_loss: 0.2745	Eval_AUC: 0.8875
+Epoch 7 Global_step 632000	Train_loss: 0.2727	Eval_AUC: 0.8853
+Epoch 7 Global_step 633000	Train_loss: 0.2756	Eval_AUC: 0.8855
+Epoch 7 Global_step 634000	Train_loss: 0.2778	Eval_AUC: 0.8851
+Epoch 7 Global_step 635000	Train_loss: 0.2770	Eval_AUC: 0.8849
+Epoch 7 Global_step 636000	Train_loss: 0.2801	Eval_AUC: 0.8839
+Epoch 7 Global_step 637000	Train_loss: 0.2837	Eval_AUC: 0.8852
+Epoch 7 Global_step 638000	Train_loss: 0.2768	Eval_AUC: 0.8850
+Epoch 7 Global_step 639000	Train_loss: 0.2759	Eval_AUC: 0.8847
+Epoch 7 Global_step 640000	Train_loss: 0.2777	Eval_AUC: 0.8849
+Epoch 7 Global_step 641000	Train_loss: 0.2769	Eval_AUC: 0.8872
+Epoch 7 Global_step 642000	Train_loss: 0.2828	Eval_AUC: 0.8867
+Epoch 7 Global_step 643000	Train_loss: 0.2795	Eval_AUC: 0.8836
+Epoch 7 Global_step 644000	Train_loss: 0.2804	Eval_AUC: 0.8864
+Epoch 7 Global_step 645000	Train_loss: 0.2731	Eval_AUC: 0.8849
+Epoch 7 Global_step 646000	Train_loss: 0.2771	Eval_AUC: 0.8858
+Epoch 7 Global_step 647000	Train_loss: 0.2798	Eval_AUC: 0.8877
+Epoch 7 Global_step 648000	Train_loss: 0.2750	Eval_AUC: 0.8871
+Epoch 7 Global_step 649000	Train_loss: 0.2758	Eval_AUC: 0.8840
+Epoch 7 Global_step 650000	Train_loss: 0.2784	Eval_AUC: 0.8842
+Epoch 7 Global_step 651000	Train_loss: 0.2728	Eval_AUC: 0.8861
+Epoch 7 Global_step 652000	Train_loss: 0.2790	Eval_AUC: 0.8854
+Epoch 7 DONE	Cost time: 25285.58
+Epoch 8 Global_step 653000	Train_loss: 0.2597	Eval_AUC: 0.8854
+Epoch 8 Global_step 654000	Train_loss: 0.2566	Eval_AUC: 0.8851
+Epoch 8 Global_step 655000	Train_loss: 0.2586	Eval_AUC: 0.8824
+Epoch 8 Global_step 656000	Train_loss: 0.2557	Eval_AUC: 0.8846
+Epoch 8 Global_step 657000	Train_loss: 0.2563	Eval_AUC: 0.8853
+Epoch 8 Global_step 658000	Train_loss: 0.2591	Eval_AUC: 0.8840
+Epoch 8 Global_step 659000	Train_loss: 0.2584	Eval_AUC: 0.8843
+Epoch 8 Global_step 660000	Train_loss: 0.2531	Eval_AUC: 0.8824
+Epoch 8 Global_step 661000	Train_loss: 0.2524	Eval_AUC: 0.8827
+Epoch 8 Global_step 662000	Train_loss: 0.2559	Eval_AUC: 0.8848
+Epoch 8 Global_step 663000	Train_loss: 0.2585	Eval_AUC: 0.8840
+Epoch 8 Global_step 664000	Train_loss: 0.2533	Eval_AUC: 0.8836
+Epoch 8 Global_step 665000	Train_loss: 0.2569	Eval_AUC: 0.8829
+Epoch 8 Global_step 666000	Train_loss: 0.2552	Eval_AUC: 0.8826
+Epoch 8 Global_step 667000	Train_loss: 0.2603	Eval_AUC: 0.8834
+Epoch 8 Global_step 668000	Train_loss: 0.2577	Eval_AUC: 0.8833
+Epoch 8 Global_step 669000	Train_loss: 0.2592	Eval_AUC: 0.8829
+Epoch 8 Global_step 670000	Train_loss: 0.2592	Eval_AUC: 0.8822
+Epoch 8 Global_step 671000	Train_loss: 0.2568	Eval_AUC: 0.8830
+Epoch 8 Global_step 672000	Train_loss: 0.2584	Eval_AUC: 0.8836
+Epoch 8 Global_step 673000	Train_loss: 0.2601	Eval_AUC: 0.8842
+Epoch 8 Global_step 674000	Train_loss: 0.2574	Eval_AUC: 0.8839
+Epoch 8 Global_step 675000	Train_loss: 0.2633	Eval_AUC: 0.8837
+Epoch 8 Global_step 676000	Train_loss: 0.2617	Eval_AUC: 0.8830
+Epoch 8 Global_step 677000	Train_loss: 0.2571	Eval_AUC: 0.8811
+Epoch 8 Global_step 678000	Train_loss: 0.2609	Eval_AUC: 0.8818
+Epoch 8 Global_step 679000	Train_loss: 0.2616	Eval_AUC: 0.8843
+Epoch 8 Global_step 680000	Train_loss: 0.2570	Eval_AUC: 0.8850
+Epoch 8 Global_step 681000	Train_loss: 0.2588	Eval_AUC: 0.8827
+Epoch 8 Global_step 682000	Train_loss: 0.2617	Eval_AUC: 0.8803
+Epoch 8 Global_step 683000	Train_loss: 0.2589	Eval_AUC: 0.8835
+Epoch 8 Global_step 684000	Train_loss: 0.2668	Eval_AUC: 0.8825
+Epoch 8 Global_step 685000	Train_loss: 0.2575	Eval_AUC: 0.8822
+Epoch 8 Global_step 686000	Train_loss: 0.2632	Eval_AUC: 0.8838
+Epoch 8 Global_step 687000	Train_loss: 0.2645	Eval_AUC: 0.8830
+Epoch 8 Global_step 688000	Train_loss: 0.2644	Eval_AUC: 0.8846
+Epoch 8 Global_step 689000	Train_loss: 0.2578	Eval_AUC: 0.8826
+Epoch 8 Global_step 690000	Train_loss: 0.2590	Eval_AUC: 0.8837
+Epoch 8 Global_step 691000	Train_loss: 0.2600	Eval_AUC: 0.8835
+Epoch 8 Global_step 692000	Train_loss: 0.2565	Eval_AUC: 0.8839
+Epoch 8 Global_step 693000	Train_loss: 0.2677	Eval_AUC: 0.8820
+Epoch 8 Global_step 694000	Train_loss: 0.2630	Eval_AUC: 0.8841
+Epoch 8 Global_step 695000	Train_loss: 0.2651	Eval_AUC: 0.8835
+Epoch 8 Global_step 696000	Train_loss: 0.2624	Eval_AUC: 0.8831
+Epoch 8 Global_step 697000	Train_loss: 0.2648	Eval_AUC: 0.8833
+Epoch 8 Global_step 698000	Train_loss: 0.2628	Eval_AUC: 0.8824
+Epoch 8 Global_step 699000	Train_loss: 0.2625	Eval_AUC: 0.8834
+Epoch 8 Global_step 700000	Train_loss: 0.2639	Eval_AUC: 0.8832
+Epoch 8 Global_step 701000	Train_loss: 0.2596	Eval_AUC: 0.8847
+Epoch 8 Global_step 702000	Train_loss: 0.2644	Eval_AUC: 0.8825
+Epoch 8 Global_step 703000	Train_loss: 0.2645	Eval_AUC: 0.8845
+Epoch 8 Global_step 704000	Train_loss: 0.2663	Eval_AUC: 0.8819
+Epoch 8 Global_step 705000	Train_loss: 0.2658	Eval_AUC: 0.8825
+Epoch 8 Global_step 706000	Train_loss: 0.2623	Eval_AUC: 0.8842
+Epoch 8 Global_step 707000	Train_loss: 0.2613	Eval_AUC: 0.8811
+Epoch 8 Global_step 708000	Train_loss: 0.2623	Eval_AUC: 0.8830
+Epoch 8 Global_step 709000	Train_loss: 0.2629	Eval_AUC: 0.8822
+Epoch 8 Global_step 710000	Train_loss: 0.2628	Eval_AUC: 0.8840
+Epoch 8 Global_step 711000	Train_loss: 0.2663	Eval_AUC: 0.8828
+Epoch 8 Global_step 712000	Train_loss: 0.2616	Eval_AUC: 0.8818
+Epoch 8 Global_step 713000	Train_loss: 0.2688	Eval_AUC: 0.8822
+Epoch 8 Global_step 714000	Train_loss: 0.2633	Eval_AUC: 0.8833
+Epoch 8 Global_step 715000	Train_loss: 0.2636	Eval_AUC: 0.8846
+Epoch 8 Global_step 716000	Train_loss: 0.2655	Eval_AUC: 0.8810
+Epoch 8 Global_step 717000	Train_loss: 0.2621	Eval_AUC: 0.8832
+Epoch 8 Global_step 718000	Train_loss: 0.2653	Eval_AUC: 0.8820
+Epoch 8 Global_step 719000	Train_loss: 0.2707	Eval_AUC: 0.8845
+Epoch 8 Global_step 720000	Train_loss: 0.2640	Eval_AUC: 0.8860
+Epoch 8 Global_step 721000	Train_loss: 0.2646	Eval_AUC: 0.8829
+Epoch 8 Global_step 722000	Train_loss: 0.2684	Eval_AUC: 0.8834
+Epoch 8 Global_step 723000	Train_loss: 0.2679	Eval_AUC: 0.8826
+Epoch 8 Global_step 724000	Train_loss: 0.2667	Eval_AUC: 0.8834
+Epoch 8 Global_step 725000	Train_loss: 0.2644	Eval_AUC: 0.8821
+Epoch 8 Global_step 726000	Train_loss: 0.2684	Eval_AUC: 0.8837
+Epoch 8 Global_step 727000	Train_loss: 0.2621	Eval_AUC: 0.8846
+Epoch 8 Global_step 728000	Train_loss: 0.2698	Eval_AUC: 0.8814
+Epoch 8 Global_step 729000	Train_loss: 0.2687	Eval_AUC: 0.8829
+Epoch 8 Global_step 730000	Train_loss: 0.2653	Eval_AUC: 0.8837
+Epoch 8 Global_step 731000	Train_loss: 0.2665	Eval_AUC: 0.8829
+Epoch 8 Global_step 732000	Train_loss: 0.2636	Eval_AUC: 0.8840
+Epoch 8 Global_step 733000	Train_loss: 0.2725	Eval_AUC: 0.8844
+Epoch 8 DONE	Cost time: 28435.17
+Epoch 9 Global_step 734000	Train_loss: 0.2623	Eval_AUC: 0.8819
+Epoch 9 Global_step 735000	Train_loss: 0.2415	Eval_AUC: 0.8841
+Epoch 9 Global_step 736000	Train_loss: 0.2394	Eval_AUC: 0.8799
+Epoch 9 Global_step 737000	Train_loss: 0.2395	Eval_AUC: 0.8809
+Epoch 9 Global_step 738000	Train_loss: 0.2393	Eval_AUC: 0.8821
+Epoch 9 Global_step 739000	Train_loss: 0.2442	Eval_AUC: 0.8827
+Epoch 9 Global_step 740000	Train_loss: 0.2384	Eval_AUC: 0.8809
+Epoch 9 Global_step 741000	Train_loss: 0.2404	Eval_AUC: 0.8793
+Epoch 9 Global_step 742000	Train_loss: 0.2434	Eval_AUC: 0.8829
+Epoch 9 Global_step 743000	Train_loss: 0.2421	Eval_AUC: 0.8812
+Epoch 9 Global_step 744000	Train_loss: 0.2445	Eval_AUC: 0.8802
+Epoch 9 Global_step 745000	Train_loss: 0.2426	Eval_AUC: 0.8820
+Epoch 9 Global_step 746000	Train_loss: 0.2423	Eval_AUC: 0.8812
+Epoch 9 Global_step 747000	Train_loss: 0.2453	Eval_AUC: 0.8794
+Epoch 9 Global_step 748000	Train_loss: 0.2453	Eval_AUC: 0.8806
+Epoch 9 Global_step 749000	Train_loss: 0.2459	Eval_AUC: 0.8813
+Epoch 9 Global_step 750000	Train_loss: 0.2460	Eval_AUC: 0.8804
+Epoch 9 Global_step 751000	Train_loss: 0.2441	Eval_AUC: 0.8790
+Epoch 9 Global_step 752000	Train_loss: 0.2453	Eval_AUC: 0.8778
+Epoch 9 Global_step 753000	Train_loss: 0.2423	Eval_AUC: 0.8815
+Epoch 9 Global_step 754000	Train_loss: 0.2432	Eval_AUC: 0.8805
+Epoch 9 Global_step 755000	Train_loss: 0.2468	Eval_AUC: 0.8803
+Epoch 9 Global_step 756000	Train_loss: 0.2465	Eval_AUC: 0.8807
+Epoch 9 Global_step 757000	Train_loss: 0.2391	Eval_AUC: 0.8817
+Epoch 9 Global_step 758000	Train_loss: 0.2466	Eval_AUC: 0.8809
+Epoch 9 Global_step 759000	Train_loss: 0.2497	Eval_AUC: 0.8805
+Epoch 9 Global_step 760000	Train_loss: 0.2485	Eval_AUC: 0.8800
+Epoch 9 Global_step 761000	Train_loss: 0.2426	Eval_AUC: 0.8793
+Epoch 9 Global_step 762000	Train_loss: 0.2494	Eval_AUC: 0.8815
+Epoch 9 Global_step 763000	Train_loss: 0.2489	Eval_AUC: 0.8785
+Epoch 9 Global_step 764000	Train_loss: 0.2429	Eval_AUC: 0.8812
+Epoch 9 Global_step 765000	Train_loss: 0.2464	Eval_AUC: 0.8802
+Epoch 9 Global_step 766000	Train_loss: 0.2487	Eval_AUC: 0.8820
+Epoch 9 Global_step 767000	Train_loss: 0.2545	Eval_AUC: 0.8809
+Epoch 9 Global_step 768000	Train_loss: 0.2457	Eval_AUC: 0.8816
+Epoch 9 Global_step 769000	Train_loss: 0.2523	Eval_AUC: 0.8803
+Epoch 9 Global_step 770000	Train_loss: 0.2509	Eval_AUC: 0.8823
+Epoch 9 Global_step 771000	Train_loss: 0.2520	Eval_AUC: 0.8789
+Epoch 9 Global_step 772000	Train_loss: 0.2490	Eval_AUC: 0.8826
+Epoch 9 Global_step 773000	Train_loss: 0.2501	Eval_AUC: 0.8803
+Epoch 9 Global_step 774000	Train_loss: 0.2564	Eval_AUC: 0.8814
+Epoch 9 Global_step 775000	Train_loss: 0.2538	Eval_AUC: 0.8799
+Epoch 9 Global_step 776000	Train_loss: 0.2527	Eval_AUC: 0.8793
+Epoch 9 Global_step 777000	Train_loss: 0.2497	Eval_AUC: 0.8794
+Epoch 9 Global_step 778000	Train_loss: 0.2479	Eval_AUC: 0.8810
+Epoch 9 Global_step 779000	Train_loss: 0.2487	Eval_AUC: 0.8798
+Epoch 9 Global_step 780000	Train_loss: 0.2501	Eval_AUC: 0.8798
+Epoch 9 Global_step 781000	Train_loss: 0.2507	Eval_AUC: 0.8802
+Epoch 9 Global_step 782000	Train_loss: 0.2517	Eval_AUC: 0.8801
+Epoch 9 Global_step 783000	Train_loss: 0.2519	Eval_AUC: 0.8816
+Epoch 9 Global_step 784000	Train_loss: 0.2507	Eval_AUC: 0.8810
+Epoch 9 Global_step 785000	Train_loss: 0.2524	Eval_AUC: 0.8805
+Epoch 9 Global_step 786000	Train_loss: 0.2522	Eval_AUC: 0.8813
+Epoch 9 Global_step 787000	Train_loss: 0.2571	Eval_AUC: 0.8819
+Epoch 9 Global_step 788000	Train_loss: 0.2570	Eval_AUC: 0.8818
+Epoch 9 Global_step 789000	Train_loss: 0.2491	Eval_AUC: 0.8795
+Epoch 9 Global_step 790000	Train_loss: 0.2544	Eval_AUC: 0.8805
+Epoch 9 Global_step 791000	Train_loss: 0.2547	Eval_AUC: 0.8823
+Epoch 9 Global_step 792000	Train_loss: 0.2504	Eval_AUC: 0.8814
+Epoch 9 Global_step 793000	Train_loss: 0.2561	Eval_AUC: 0.8801
+Epoch 9 Global_step 794000	Train_loss: 0.2534	Eval_AUC: 0.8807
+Epoch 9 Global_step 795000	Train_loss: 0.2574	Eval_AUC: 0.8805
+Epoch 9 Global_step 796000	Train_loss: 0.2505	Eval_AUC: 0.8802
+Epoch 9 Global_step 797000	Train_loss: 0.2592	Eval_AUC: 0.8824
+Epoch 9 Global_step 798000	Train_loss: 0.2510	Eval_AUC: 0.8828
+Epoch 9 Global_step 799000	Train_loss: 0.2552	Eval_AUC: 0.8818
+Epoch 9 Global_step 800000	Train_loss: 0.2561	Eval_AUC: 0.8789
+Epoch 9 Global_step 801000	Train_loss: 0.2530	Eval_AUC: 0.8818
+Epoch 9 Global_step 802000	Train_loss: 0.2548	Eval_AUC: 0.8812
+Epoch 9 Global_step 803000	Train_loss: 0.2569	Eval_AUC: 0.8813
+Epoch 9 Global_step 804000	Train_loss: 0.2526	Eval_AUC: 0.8821
+Epoch 9 Global_step 805000	Train_loss: 0.2604	Eval_AUC: 0.8825
+Epoch 9 Global_step 806000	Train_loss: 0.2592	Eval_AUC: 0.8826
+Epoch 9 Global_step 807000	Train_loss: 0.2573	Eval_AUC: 0.8810
+Epoch 9 Global_step 808000	Train_loss: 0.2551	Eval_AUC: 0.8813
+Epoch 9 Global_step 809000	Train_loss: 0.2599	Eval_AUC: 0.8830
+Epoch 9 Global_step 810000	Train_loss: 0.2575	Eval_AUC: 0.8803
+Epoch 9 Global_step 811000	Train_loss: 0.2621	Eval_AUC: 0.8829
+Epoch 9 Global_step 812000	Train_loss: 0.2627	Eval_AUC: 0.8814
+Epoch 9 Global_step 813000	Train_loss: 0.2561	Eval_AUC: 0.8834
+Epoch 9 Global_step 814000	Train_loss: 0.2600	Eval_AUC: 0.8810
+Epoch 9 Global_step 815000	Train_loss: 0.2544	Eval_AUC: 0.8821
+Epoch 9 DONE	Cost time: 31623.17
+model saved at save_path/atrank-815240
+('best test_auc:', 0.8918987749671263)
+Finished

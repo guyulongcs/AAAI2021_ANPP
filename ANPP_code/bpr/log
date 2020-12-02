@@ -1,0 +1,113 @@
+RuntimeError: module compiled against API version 0xc but this version of numpy is 0xb
+RuntimeError: module compiled against API version 0xc but this version of numpy is 0xb
+2018-06-12 21:17:57.556741: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-12 21:18:00.502063: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:02:00.0
+totalMemory: 22.38GiB freeMemory: 17.59GiB
+2018-06-12 21:18:00.502120: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-06-12 21:18:00.913817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-12 21:18:00.913880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-06-12 21:18:00.913889: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-06-12 21:18:00.914332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 17059 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:02:00.0, compute capability: 6.1)
+epoch: 1	train_loss: 0.53	lr: 1.00	
+test_auc: 0.7646
+epoch: 2	train_loss: 0.45	lr: 1.00	
+test_auc: 0.7713
+epoch: 3	train_loss: 0.40	lr: 1.00	
+test_auc: 0.7843
+epoch: 4	train_loss: 0.34	lr: 1.00	
+test_auc: 0.7922
+epoch: 5	train_loss: 0.27	lr: 1.00	
+test_auc: 0.7958
+epoch: 6	train_loss: 0.22	lr: 1.00	
+test_auc: 0.7974
+epoch: 7	train_loss: 0.18	lr: 1.00	
+test_auc: 0.7983
+epoch: 8	train_loss: 0.15	lr: 1.00	
+test_auc: 0.7989
+epoch: 9	train_loss: 0.13	lr: 1.00	
+test_auc: 0.7989
+epoch: 10	train_loss: 0.12	lr: 1.00	
+test_auc: 0.7993
+epoch: 11	train_loss: 0.11	lr: 1.00	
+test_auc: 0.7996
+epoch: 12	train_loss: 0.11	lr: 1.00	
+test_auc: 0.7997
+epoch: 13	train_loss: 0.10	lr: 1.00	
+test_auc: 0.7999
+epoch: 14	train_loss: 0.09	lr: 1.00	
+test_auc: 0.7999
+epoch: 15	train_loss: 0.09	lr: 1.00	
+test_auc: 0.8001
+epoch: 16	train_loss: 0.09	lr: 1.00	
+test_auc: 0.8000
+epoch: 17	train_loss: 0.08	lr: 1.00	
+test_auc: 0.8001
+epoch: 18	train_loss: 0.08	lr: 1.00	
+test_auc: 0.8001
+epoch: 19	train_loss: 0.08	lr: 1.00	
+test_auc: 0.8002
+epoch: 20	train_loss: 0.08	lr: 1.00	
+test_auc: 0.8004
+epoch: 21	train_loss: 0.07	lr: 1.00	
+test_auc: 0.8004
+epoch: 22	train_loss: 0.07	lr: 1.00	
+test_auc: 0.8004
+epoch: 23	train_loss: 0.07	lr: 1.00	
+test_auc: 0.8004
+epoch: 24	train_loss: 0.07	lr: 1.00	
+test_auc: 0.8003
+epoch: 25	train_loss: 0.07	lr: 1.00	
+test_auc: 0.8002
+epoch: 26	train_loss: 0.07	lr: 1.00	
+test_auc: 0.8003
+epoch: 27	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8003
+epoch: 28	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8004
+epoch: 29	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8003
+epoch: 30	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8003
+epoch: 31	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8003
+epoch: 32	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8003
+epoch: 33	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8003
+epoch: 34	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8002
+epoch: 35	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8001
+epoch: 36	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8001
+epoch: 37	train_loss: 0.06	lr: 1.00	
+test_auc: 0.8001
+epoch: 38	train_loss: 0.05	lr: 1.00	
+test_auc: 0.8000
+epoch: 39	train_loss: 0.05	lr: 1.00	
+test_auc: 0.8000
+epoch: 40	train_loss: 0.05	lr: 1.00	
+test_auc: 0.8000
+epoch: 41	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7999
+epoch: 42	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7998
+epoch: 43	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7999
+epoch: 44	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7998
+epoch: 45	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7998
+epoch: 46	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7998
+epoch: 47	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7997
+epoch: 48	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7998
+epoch: 49	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7998
+epoch: 50	train_loss: 0.05	lr: 1.00	
+test_auc: 0.7997
+('best test_auc:', 0.80043453)

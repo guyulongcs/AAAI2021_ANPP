@@ -1,0 +1,92 @@
+RuntimeError: module compiled against API version 0xc but this version of numpy is 0xb
+RuntimeError: module compiled against API version 0xc but this version of numpy is 0xb
+2018-06-13 10:53:51.253489: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-06-13 10:53:51.547997: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:03:00.0
+totalMemory: 22.38GiB freeMemory: 22.00GiB
+2018-06-13 10:53:51.548052: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-06-13 10:53:51.856965: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-13 10:53:51.857023: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-06-13 10:53:51.857032: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-06-13 10:53:51.857554: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21347 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:03:00.0, compute capability: 6.1)
+test_auc: 0.5038
+Epoch 0 Global_step 1000	Train_loss: 0.6790	Eval_AUC: 0.6236
+Epoch 0 Global_step 2000	Train_loss: 0.6702	Eval_AUC: 0.6530
+Epoch 0 Global_step 3000	Train_loss: 0.6504	Eval_AUC: 0.7005
+Epoch 0 Global_step 4000	Train_loss: 0.6236	Eval_AUC: 0.7288
+Epoch 0 Global_step 5000	Train_loss: 0.6034	Eval_AUC: 0.7599
+Epoch 0 Global_step 6000	Train_loss: 0.5864	Eval_AUC: 0.7661
+Epoch 0 Global_step 7000	Train_loss: 0.5731	Eval_AUC: 0.7726
+Epoch 0 Global_step 8000	Train_loss: 0.5665	Eval_AUC: 0.7880
+Epoch 0 Global_step 9000	Train_loss: 0.5615	Eval_AUC: 0.7864
+Epoch 0 Global_step 10000	Train_loss: 0.5531	Eval_AUC: 0.7960
+Epoch 0 Global_step 11000	Train_loss: 0.5441	Eval_AUC: 0.8011
+Epoch 0 Global_step 12000	Train_loss: 0.5459	Eval_AUC: 0.7997
+Epoch 0 Global_step 13000	Train_loss: 0.5403	Eval_AUC: 0.8045
+Epoch 0 Global_step 14000	Train_loss: 0.5385	Eval_AUC: 0.8066
+Epoch 0 Global_step 15000	Train_loss: 0.5323	Eval_AUC: 0.8060
+Epoch 0 Global_step 16000	Train_loss: 0.5322	Eval_AUC: 0.8110
+Epoch 0 Global_step 17000	Train_loss: 0.5291	Eval_AUC: 0.8133
+Epoch 0 Global_step 18000	Train_loss: 0.5309	Eval_AUC: 0.8106
+Epoch 0 Global_step 19000	Train_loss: 0.5252	Eval_AUC: 0.8176
+Epoch 0 Global_step 20000	Train_loss: 0.5190	Eval_AUC: 0.8172
+Epoch 0 Global_step 21000	Train_loss: 0.5231	Eval_AUC: 0.8114
+Epoch 0 Global_step 22000	Train_loss: 0.5225	Eval_AUC: 0.8147
+Epoch 0 Global_step 23000	Train_loss: 0.5177	Eval_AUC: 0.8189
+Epoch 0 Global_step 24000	Train_loss: 0.5234	Eval_AUC: 0.8188
+Epoch 0 Global_step 25000	Train_loss: 0.5174	Eval_AUC: 0.8185
+Epoch 0 Global_step 26000	Train_loss: 0.5190	Eval_AUC: 0.8166
+Epoch 0 Global_step 27000	Train_loss: 0.5116	Eval_AUC: 0.8202
+Epoch 0 Global_step 28000	Train_loss: 0.5170	Eval_AUC: 0.8177
+Epoch 0 Global_step 29000	Train_loss: 0.5133	Eval_AUC: 0.8218
+Epoch 0 Global_step 30000	Train_loss: 0.5145	Eval_AUC: 0.8210
+Epoch 0 Global_step 31000	Train_loss: 0.5155	Eval_AUC: 0.8219
+Epoch 0 Global_step 32000	Train_loss: 0.5144	Eval_AUC: 0.8229
+Epoch 0 Global_step 33000	Train_loss: 0.5121	Eval_AUC: 0.8235
+Epoch 0 Global_step 34000	Train_loss: 0.5064	Eval_AUC: 0.8259
+Epoch 0 Global_step 35000	Train_loss: 0.5105	Eval_AUC: 0.8264
+Epoch 0 Global_step 36000	Train_loss: 0.5088	Eval_AUC: 0.8231
+Epoch 0 Global_step 37000	Train_loss: 0.5113	Eval_AUC: 0.8251
+Epoch 0 Global_step 38000	Train_loss: 0.5054	Eval_AUC: 0.8259
+Epoch 0 Global_step 39000	Train_loss: 0.5091	Eval_AUC: 0.8274
+Epoch 0 Global_step 40000	Train_loss: 0.5059	Eval_AUC: 0.8285
+Epoch 0 Global_step 41000	Train_loss: 0.5014	Eval_AUC: 0.8281
+Epoch 0 Global_step 42000	Train_loss: 0.5055	Eval_AUC: 0.8268
+Epoch 0 Global_step 43000	Train_loss: 0.5040	Eval_AUC: 0.8226
+Epoch 0 Global_step 44000	Train_loss: 0.5048	Eval_AUC: 0.8291
+Epoch 0 Global_step 45000	Train_loss: 0.5005	Eval_AUC: 0.8234
+Epoch 0 Global_step 46000	Train_loss: 0.5067	Eval_AUC: 0.8241
+Epoch 0 Global_step 47000	Train_loss: 0.4993	Eval_AUC: 0.8315
+Epoch 0 Global_step 48000	Train_loss: 0.5014	Eval_AUC: 0.8303
+Epoch 0 Global_step 49000	Train_loss: 0.4995	Eval_AUC: 0.8290
+Epoch 0 Global_step 50000	Train_loss: 0.5012	Eval_AUC: 0.8302
+Epoch 0 Global_step 51000	Train_loss: 0.4985	Eval_AUC: 0.8323
+Epoch 0 Global_step 52000	Train_loss: 0.4987	Eval_AUC: 0.8318
+Epoch 0 Global_step 53000	Train_loss: 0.4964	Eval_AUC: 0.8276
+Epoch 0 Global_step 54000	Train_loss: 0.4932	Eval_AUC: 0.8340
+Epoch 0 Global_step 55000	Train_loss: 0.4969	Eval_AUC: 0.8327
+Epoch 0 Global_step 56000	Train_loss: 0.4910	Eval_AUC: 0.8335
+Epoch 0 Global_step 57000	Train_loss: 0.4968	Eval_AUC: 0.8271
+Epoch 0 Global_step 58000	Train_loss: 0.4945	Eval_AUC: 0.8347
+Epoch 0 Global_step 59000	Train_loss: 0.4947	Eval_AUC: 0.8332
+Epoch 0 Global_step 60000	Train_loss: 0.4941	Eval_AUC: 0.8344
+Epoch 0 Global_step 61000	Train_loss: 0.4928	Eval_AUC: 0.8322
+Epoch 0 Global_step 62000	Train_loss: 0.4929	Eval_AUC: 0.8361
+Epoch 0 Global_step 63000	Train_loss: 0.4918	Eval_AUC: 0.8337
+Epoch 0 Global_step 64000	Train_loss: 0.4920	Eval_AUC: 0.8352
+Epoch 0 Global_step 65000	Train_loss: 0.4912	Eval_AUC: 0.8373
+Epoch 0 Global_step 66000	Train_loss: 0.4922	Eval_AUC: 0.8365
+Epoch 0 Global_step 67000	Train_loss: 0.4897	Eval_AUC: 0.8386
+Epoch 0 Global_step 68000	Train_loss: 0.4905	Eval_AUC: 0.8349
+Epoch 0 Global_step 69000	Train_loss: 0.4879	Eval_AUC: 0.8373
+Epoch 0 Global_step 70000	Train_loss: 0.4856	Eval_AUC: 0.8376
+Epoch 0 Global_step 71000	Train_loss: 0.4875	Eval_AUC: 0.8402
+Epoch 0 Global_step 72000	Train_loss: 0.4865	Eval_AUC: 0.8409
+Epoch 0 Global_step 73000	Train_loss: 0.4845	Eval_AUC: 0.8405
+Epoch 0 Global_step 74000	Train_loss: 0.4823	Eval_AUC: 0.8419
+Epoch 0 Global_step 75000	Train_loss: 0.4887	Eval_AUC: 0.8407
+Epoch 0 Global_step 76000	Train_loss: 0.4848	Eval_AUC: 0.8432
+Epoch 0 Global_step 77000	Train_loss: 0.4823	Eval_AUC: 0.8399
+Epoch 0 Global_step 78000	Train_loss: 0.4796	Eval_AUC: 0.8454
+Epoch 0 Global_step 79000	Train_loss: 0.4794	Eval_AUC: 0.8418
