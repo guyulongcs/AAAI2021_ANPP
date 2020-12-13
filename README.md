@@ -13,7 +13,7 @@ tensorflow==1.12
 
 # Datasets:
 
-ANPP_data contains the dataset used in the paper: Hawkes, Financial, MIMMIC, Amzon(Beauty), Amazon(Clothes).
+ANPP_data contains the dataset used in the paper: Hawkes, Financial, MIMIC, Amzon(Beauty), Amazon(Clothes).
 
 ## Usage
 
@@ -23,7 +23,7 @@ Please select the dataset by modifying the dataset_run field in ANPP_code/Config
 
 ## Citation:
 
-Please cite the following paper if you use the data in any way.
+Please cite the following paper if you use the code or dataset in any way.
 
 ```
 @inproceedings{gu2021anpp,
