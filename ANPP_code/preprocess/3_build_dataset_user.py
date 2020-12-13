@@ -100,20 +100,10 @@ def build_atrank():
       if i == seq_len - 1:
         label = (user_item_list[i], neg_list[i])
         test_set.append((user_id, hist_i, hist_t, label))
-      # valid
-      #if i == seq_len - 2:
-      #  label = (user_item_list[i], neg_list[i])
-      #  valid_set.append((user_id, hist_i, hist_t, label, hist_t_ts))
-      # train
+
       else:
         train_set.append((user_id, hist_i, hist_t, user_item_list[i], 1))
         train_set.append((user_id, hist_i, hist_t, neg_list[i], 0))
-        #train_set_split_pos_neg.append((user_id, hist_i, hist_t, user_item_list[i], neg_list[i], hist_t_ts))
-
-      #if (i == seq_len - 3):
-      #  train_set.append((user_id, hist_i, hist_t, user_item_list[i], 1, hist_t_ts))
-      #  train_set.append((user_id, hist_i, hist_t, neg_list[i], 0, hist_t_ts))
-        #train_set_pos_neg.append((user_id, hist_i, hist_t, user_item_list[i], neg_list[i], hist_t_ts))
 
   assert len(test_set) == valid_user_count
   # assert(len(test_set) + len(train_set) // 2 == user_df.shape[0])
@@ -364,15 +354,6 @@ def build_dataset_split_time_splitGap(folder_src, file_pkl_remap, folder_dst):
     save_sequences_user_split(user_item_list, user_cate_list, user_time_list_ts, user_time_list, dict_user_dataset, dict_user_test_negN, user_id,
                               user_split_index_arr, dict_item_cate, item_count, cate_count)
 
-    # print("dict_user_dataset[user_id]:")
-    # for seq in dict_user_dataset[user_id]:
-    #   [user_item_list_cur, user_time_list_ts_cur] = seq
-      # print("\n user_item_list_cur:"), user_item_list_cur
-      # print("\n user_time_list_ts_cur:"), user_time_list_ts_cur
-
-    #if(valid_user_count > 10):
-    #  break
-
   # write pkl dataset
   write_pkl_dataset(file_pkl_dataset, dict_user_dataset, cate_list, user_count, item_count, cate_count, dict_item_cate, dict_user_test_negN)
 
@@ -394,41 +375,12 @@ def read_file_remap_pkl(folder_src, file_pkl_remap):
   return (user_df, cate_list, user_count, item_count, cate_count, example_count, item_map, cate_map, user_map, dict_item_cate)
 
 def run(folder_src, file_pkl_remap, folder_dst, test_neg_N_item, test_neg_N_cate):
-
-
-  #user_num_0 = build_test_user_negN(item_count)
-  #user_num_1 = build_atrank()
-  #user_num_2 = build_SASRec()
-
   build_dataset(folder_src, file_pkl_remap, folder_dst, test_neg_N_item, test_neg_N_cate)
 
   build_dataset_split_time_splitGap(folder_src, file_pkl_remap, folder_dst)
 
-  #assert(user_num_0 == user_num_1 == user_num_2)
 
   print "build_dataset done!"
-
-  #SASRec
-
-  # train_set_pos_neg.append((user_id, hist_i, hist_t, user_item_list[i], neg_list[i], hist_t_ts))
-  #
-  # seq = np.zeros([Config.max_seq_len], dtype=np.int32)
-  # pos = np.zeros([Config.max_seq_len], dtype=np.int32)
-  # neg = np.zeros([Config.max_seq_len], dtype=np.int32)
-  # nxt = userlist[-1]
-  # idx = Config.max_seq_len - 1
-  #
-  # ts = set(user_seq_list)
-  # for i in reversed(user_seq_list[:-1]):
-  #   seq[idx] = i
-  #   pos[idx] = nxt
-  #   if nxt != 0:
-  #     neg[idx] = random_neq(1, item_count+ 1, ts)
-  #   nxt = i
-  #   idx -= 1
-  #   if idx == -1: break
-  #
-  # train_set_pos_neg.append(user, seq, pos, neg)
 
   print "3_build_dataset end..."
 

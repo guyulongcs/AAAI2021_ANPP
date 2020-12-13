@@ -130,6 +130,9 @@ class DatasetSeq():
 
 		#print("timeTest:", len(self.timeTest), len(self.timeTest[0]))
 
+		print("self.eventTrain:", self.eventTrain[0])
+		print("self.eventTest:", self.eventTest[0])
+
 		print("self.timeTest old:", self.timeTest[0])
 		if(self.time_flag_parse_seq_to_startZero and self.args.dataset in Config.dataset_should_process_time_seq_to_startZero):
 			self.timeTrain = DatasetSeq.process_time_seq_to_startZero(self.timeTrain)

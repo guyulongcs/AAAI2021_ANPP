@@ -1,0 +1,406 @@
+python -u run_dataset_model.py -dataset hawkes -model ANPP
+dataset: hawkes
+model: ANPP
+mkdir -p /Users/guyulong/program/project/AAAI2021_ANPP/ANPP_dataset/hawkes/ANPP; cd ANPP; python -u run.py hawkes ANPP /Users/guyulong/program/project/AAAI2021_ANPP/ANPP_dataset/hawkes /Users/guyulong/program/project/AAAI2021_ANPP/ANPP_dataset/hawkes/ANPP 100; cd ..
+python -u run_model.py --dataset hawkes --model ANPP --folder_dataset /Users/guyulong/program/project/AAAI2021_ANPP/ANPP_dataset/hawkes --folder_dataset_model /Users/guyulong/program/project/AAAI2021_ANPP/ANPP_dataset/hawkes/ANPP --max_T 2 --weight_loss 1,1 > /Users/guyulong/program/project/AAAI2021_ANPP/ANPP_dataset/hawkes/ANPP/log_train_WeightLoss[1,1]_TP[time_norm_by_TimeMinMax]_TimeEncode[time_delta_prev_bucket]_LossTime[intensity]_T[2]_K[1]_Ep[20]_Bl[1]_Hea[4]_Hid[64]_Model[ANPP]
+please tail -f the log file in previous line
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)
+/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_code/ANPP/model_core.py:737: IntegrationWarning: The occurrence of roundoff error is detected, which prevents 
+  the requested tolerance from being achieved.  The error may be 
+  underestimated.
+  val, _err = quad(quad_func, 0, upbound, args=args)

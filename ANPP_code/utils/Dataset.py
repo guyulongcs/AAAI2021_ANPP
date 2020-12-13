@@ -88,8 +88,8 @@ class Dataset():
             res = Dataset.load_dataset_rmtpp(file)
         elif (model == "intensityRNN"):
             res = Dataset.load_dataset_intensityRNN(file)
-        elif (model == "AMPP_En_Seq"):
-            res = Dataset.load_dataset_AMPP_En_Seq(file)
+        elif (model == "ANPP"):
+            res = Dataset.load_dataset_ANPP(file)
         elif(model.startswith("AMPP_")):
             res = Dataset.load_dataset_train(file)
         print('Loading data done!')
@@ -145,8 +145,8 @@ class Dataset():
             return (event_train, event_test, time_train, time_test)
 
     @classmethod
-    def load_dataset_AMPP_En_Seq(cls, file):
-        print('load_dataset_AMPP_En_Seq..')
+    def load_dataset_ANPP(cls, file):
+        print('load_dataset_ANPP..')
         with open(file, 'rb') as f:
             (event_train, event_test, time_train, time_test) = pickle.load(f)
 

@@ -3,52 +3,45 @@ import numpy as np
 
 class Config():
     ##data
-    folder= "~/data/AMPP_PP"
-    dataset_list_Amazon = ["Beauty", "Electronics", "Clothing_Shoes_and_Jewelry"]
+    #folder= "~/data/ANPP_dataset"
+    folder="/Users/guyulong/program/project/AAAI2021_ANPP/ANPP_dataset"
+    dataset_list_Amazon = ["Beauty", "Clothing_Shoes_and_Jewelry"]
 
     ##exp conf
-    dataset_list = ["Beauty", "Electronics", "Clothing_Shoes_and_Jewelry", 'AliRepeat']
-    data_list_real = ["ali", "book_order", "lastfm", "sns", "so", "mimic2", "twitter"]
-    data_list_synthetic = ["hawkes", "hawkes5", "selfcorrecting", "mixture-HMM", "loglogistic"]
-
-    model_list = ['rmtpp', 'rmtpp_att', 'intensityRNN', 'atrank', "SASRec", 'AMPP_En', 'AMPP_En_SASRec', 'AMPP_EnDe_ATRank', 'AMPP_EnDe', "AMPP_En_Seq", 'RNN', 'Transformer', "neuraHawkes"]
+    dataset_list = ["Beauty", "Clothing_Shoes_and_Jewelry"]
+    data_list_real = ["financial", "mimic"]
+    data_list_synthetic = ["hawkes"]
 
     flag_train_mini = False
     flag_test_mini = False
     flag_test_mini_cnt = 500
 
     item_type_list = ["item", "category", "all"]
-    train_type = item_type_list[0]
+    train_type = item_type_list[1]
     flag_train_cate = True
     flag_padding = True
-    #dataset, model
-    dataset_run = "so"
-    dataset_run = "ali"
-    dataset_run = "lastfm"
-    dataset_run = "book_order"
-    #dataset_run = "mimic2"
-    #dataset_run = "hawkes"
-    #dataset_run = "hawkes5"
-    #dataset_run = "selfcorrecting"
-    #dataset_run = "mixture-HMM"
-
-    dataset_run = "Beauty"
-    #dataset_run = "Electronics"
+    #dataset
+    ##Hawkes
+    dataset_run = "hawkes"
+    ##Financial
+    #dataset_run = "financial"
+    ##MIMIC
+    #dataset_run = "mimic"
+    ##Beauty
+    #dataset_run = "Beauty"
+    ##Clothes
     #dataset_run = "Clothing_Shoes_and_Jewelry"
-    #dataset_run = "AliRepeat"
-    model_run = "AMPP_En_Seq"
-    #model_run = "rmtpp"
-    #model_run = "intensityRNN"
-    #model_run = "RNN"
-    #model_run = "Transformer"
-    #model_run = "neuraHawkes"
+
+    #model
+    model_run = "ANPP"
+
     ###preprocess
     flag_preprocess_dataset = False
-    flag_download_data_Amazon = False
-    flag_convert_pd = False
-    flag_remap_id = False
-    flag_build_dataset_user = False
-    flag_build_dataset_train = False
+    flag_download_data_Amazon = True
+    flag_convert_pd = True
+    flag_remap_id = True
+    flag_build_dataset_user = True
+    flag_build_dataset_train = True
 
     flag_run_model = True
 
@@ -63,50 +56,34 @@ class Config():
     time_method = "time_norm_by_TimeMinMax"
     #time_method = "time_parse_start_zero"
     #time_method = "time_org"
+
     #seq
-    #if(dataset_run in dataset_should_process_time_seq_to_startZero):
-    #    time_method = "time_parse_start_zero"
+    if(dataset_run in dataset_should_process_time_seq_to_startZero):
+       time_method = "time_parse_start_zero"
     max_seq_len = 50
 
     #bptt
     bptt_default=20
     bptt_dict = {
-        "mimic2": 2,
-        "so": 6,
-        "ali": 10,
-        "lastfm": 8,
-        "book_order": 3,        #finantial data
-        "hawkes": 2,
-        "selfcorrecting": 2,
-        "mixture-HMM": 2
+        "mimic": 2,
+        "financial": 3,
+        "hawkes": 2
     }
     bptt = bptt_dict.get(dataset_run, bptt_default)
-    #bptt = 10
 
 
     batch_size_default=64
     batch_size_dict = {
         "hawkes": 8,
-        "selfcorrecting": 8,
-        "mixture-HMM": 8,
-        "book_order":8,
-        "hawkes5":32
+        "financial":8,
     }
     batch_size = batch_size_dict.get(dataset_run, batch_size_default)
 
-
-    #
     metrics_K_default=20
     metrics_K_dict = {
-        "mimic2":20,
-        "ali": 20,
-        "so": 10,
-        "book_order": 1,
-        "lastfm": 50,
+        "mimic":20,
+        "financial": 1,
         "hawkes": 1,
-        "selfcorrecting": 1,
-        "mixture-HMM": 1,
-        "hawkes5":3
     }
     metrics_K = metrics_K_dict.get(dataset_run, metrics_K_default)
 
@@ -115,28 +92,22 @@ class Config():
     #train_num_epochs
     train_num_epochs_default = 10
     train_num_epochs_dict = {
-        "mimic2": 100,
-        "lastfm": 10,
-        "book_order": 10,
+        "mimic": 100,
+        "financial": 10,
         "hawkes": 20,
-        "selfcorrecting": 20,
-        "mixture-HMM": 20,
         "Beauty": 10,
         "Clothing_Shoes_and_Jewelry": 20
     }
     train_num_epochs = train_num_epochs_dict.get(dataset_run, train_num_epochs_default)
-    #train_num_epochs=1
+    #train_num_epochs=2
 
     ##split data
     flag_split_user_seq_OnlyOneTrainFromLast = False
-    #if gap > split_sequence_time_gap_max: split sequence
     split_sequence_time_gap_max = 60
     split_sequence_time_T = 30
     sequence_mini_min_len=3
 
     #train
-
-
     #loss: event, time
     weight_loss = "1,1"
     weight_loss_regularization=0.001
@@ -145,16 +116,10 @@ class Config():
 
     time_scale_default = 0.01
     time_scale_dict = {
-        "lastfm": 0.001,
-        "book_order": 0.001,
-        "so": 0.01,
-        "hawkes": 0.001,
-        "selfcorrecting": 0.001,
-        "mixture-HMM": 0.001
-
+        "financial": 0.001,
+        "hawkes": 0.001
     }
     time_scale = time_scale_dict.get(dataset_run, time_scale_default)
-
 
     learning_rate = 0.001
 
@@ -181,18 +146,7 @@ class Config():
         "dataset_train": "dataset_train.pkl",
         "dataset_splitGap": "dataset_splitGap.pkl",
         "dataset_seq": "dataset_seq.pkl",
-        "atrank": "dataset_%s.pkl" % "atrank",
-        "SASRec": "dataset_%s.pkl" % "SASRec",
-        "rmtpp": "dataset_%s.pkl" % "rmtpp",
-        "rmtpp_att": "dataset_%s.pkl" % "rmtpp_att",
-        "intensityRNN": "dataset_%s.pkl" % "intensityRNN",
-        "AMPP_En": "dataset_train.pkl",
-        "AMPP_EnDe": "dataset_train_EnDe.pkl",
-        "AMPP_En_SASRec": "dataset_train.pkl",
-        "AMPP_EnDe_ATRank": "dataset_train_%s.pkl" % "ATRank",
-        "AMPP_En_Seq": "dataset_%s.pkl" % "AMPP_En_Seq",
-        "neuraHawkes": "dataset_%s.pkl" % "neuraHawkes",
-
+        "ANPP": "dataset_%s.pkl" % "ANPP",
     }
 
     file_dataset_desc = "desc"
@@ -230,31 +184,7 @@ class Config():
     time_flag_parse_seq_to_startZero = True
 
     model_note=model_run
-    if(model_run == "intensityRNN"):
-        loss_time_method = "gaussian"
-        flagMinMax = False
-        flagScale = False
-
-    if(model_run == "RNN"):
-        model_run = "intensityRNN"
-        weight_loss_intensityRNN = "1,0"
-        weight_loss_intensityRNN = "0,1"
-        loss_time_method="mse"
-        flagMinMax = False
-        flagScale = False
-    if(model_run == "Transformer"):
-        model_run = "AMPP_En_Seq"
-        weight_loss = "1,0"
-        weight_loss = "0,1"
-        loss_time_method = "mse"
-        flagMinMax = False
-        flagScale = False
-        #time_method = "time_org"
-        time_encode_method = "pos"
 
     hidden_units = 64
-
-
-
 
 

@@ -12,9 +12,9 @@ mkdir -p ${folder}
 cd ${folder}
 
 
-#wget -c http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/${file_review_gz}
+wget -c http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/${file_review_gz}
 gzip -d ${file_review_gz}
 
-#wget -c http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/${file_meta_gz}
+wget -c http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/${file_meta_gz}
 gzip -d ${file_meta_gz}
 
