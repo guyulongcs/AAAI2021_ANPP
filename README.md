@@ -5,6 +5,8 @@ Attentive Neural Point Processes for Event Forecasting (AAAI 2021)
 
    ANPP_code is the code for the paper "Attentive Neural Point Processes for Event Forecasting", which is published in AAAI 2021. 
 
+![The proposed framework](ANPP.jpg)
+
 ## Requirements
 
 python==2.7
